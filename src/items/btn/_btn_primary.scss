@@ -1,6 +1,7 @@
 .btn_primary{
     color: $text-light;
     background-color: $black;
+    border-color: $black;
 
     &:hover, &:focus{
         color: $text-light;

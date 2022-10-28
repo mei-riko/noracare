@@ -1,17 +1,18 @@
 .select{
     display: inline-block;
 
+    font-size: map-get($map: $font-size, $key: sm);
+    line-height: 20px;
+
+    border: 1px solid $input;
     border-radius: 12px;
+
     padding: 14px 16px;
     outline: none;
-    border: 1px solid $input;
+
     background-color: $input;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-    
-    // <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-    // <path d="M5 8L10 13L15 8H5Z" fill="#424242"/>
-    // </svg>
-    
+    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23A2B4BC' stroke='none' d='M5 8L10 13L15 8H5Z'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
     background-size: 18px;
     background-position: right .75rem center;

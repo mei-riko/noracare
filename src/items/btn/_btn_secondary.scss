@@ -1,2 +1,8 @@
 .btn_secondary{
+    border-color: $black;
+
+    &:hover{
+        border-color: $golden-1;
+        color: $golden-1;
+    }
 }

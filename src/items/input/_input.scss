@@ -1,10 +1,16 @@
 .input{
+    padding: 13px 16px;
+
     border-radius: 12px;
-    padding: 14px 16px;
-    outline: none;
     border: 1px solid $input;
+
     background-color: $input;
     color: $text-dark;
+    outline: none;
+
+    font-size: map-get($map: $font-size, $key: sm);
+    line-height: 20px;
+    max-height: 48px;
 
     &::placeholder{
         color: $text-secondary-1;
@@ -13,7 +19,7 @@
     &:focus{
         border-color: $text-secondary-2;
     }
-    
+
     &--full{
         width: 100%;
     }

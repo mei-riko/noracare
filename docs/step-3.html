@@ -1,0 +1,86 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Nora Care</title>
+    <link href="./css/sf-pro-display.css" rel="stylesheet"/>
+    <link href="./css/main.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <div class="content"> 
+      <div class="content__col">
+        <div class="sidebar sidebar_content"><img class="sidebar__logo sidebar__logo_full" src="./img/logo-full.png"/>
+          <div class="sidebar__intro">
+            <h1 class="h2">50% filled</h1>
+            <p>Nice to meet you, John Jameson! You are filled part 1 of our question’s list</p>
+            <div class="steps">
+              <div class="steps__item steps__item--filled">
+                <div class="steps__item-num steps__item-num--filled">1</div>
+                <div class="steps__item-name">Basic information</div>
+              </div>
+              <div class="steps__item steps__item--filled">
+                <div class="steps__item-num steps__item-num--filled">2</div>
+                <div class="steps__item-name">History of present illness</div>
+              </div>
+              <div class="steps__item steps__item--active">
+                <div class="steps__item-num steps__item-num--active">3</div>
+                <div class="steps__item-name">Medical history</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">4</div>
+                <div class="steps__item-name">Past surgical history</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__col">
+        <div class="content__block content__block--full">
+          <div class="form"> 
+            <p class="h3 form__title">Medical history </p>
+            <div class="form__row form__row_1-col">
+              <div class="form__group">
+                <div class="label">Do you have any medical conditions?</div>
+                <div class="form__row form__row_2-col">
+                  <div class="form__group">
+                    <label class="radio radio--full" for="noC">
+                      <input class="radio__input" type="radio" name="conditions" id="noC" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                    </label>
+                  </div>
+                  <div class="form__group">
+                    <label class="radio radio--full" for="yesC">
+                      <input class="radio__input" type="radio" name="conditions" id="yesC"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col">
+              <div class="form__group">
+                <div class="label">Are you currently taking any medications, including pain medications?</div>
+                <div class="form__row form__row_2-col">
+                  <div class="form__group">
+                    <label class="radio radio--full" for="noM">
+                      <input class="radio__input" type="radio" name="medications" id="noM" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                    </label>
+                  </div>
+                  <div class="form__group">
+                    <label class="radio radio--full" for="yesM">
+                      <input class="radio__input" type="radio" name="medications" id="yesM"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__btns"> <a class="btn btn_secondary" href="step-2.html">Previous step</a><a class="btn btn_primary" href="step-4.html">Next step</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.inputmask.min.js"></script>
+    <script src="./js/app.min.js"></script>
+  </body>
+</html>

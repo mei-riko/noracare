@@ -35,34 +35,58 @@ block content
                                 option(value="2") unrestrained driver
                                 option(value="3") front-seat passenger
                                 option(value="4") back-seat passenger
+                                option(value="5") bicyclist
+                                option(value="6") motocyclist
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="name") Was engaged in a:
+                            select.select.select--full()
+                                option(value="1") driver’s side impact
+                                option(value="2") front-end impact
+                                option(value="3") rear-end impact
+                                option(value="4") passenger's side impact
+                                option(value="5") T-bone collision
+                                option(value="6") side-swipe collision
+                                option(value="7") head-on collision
                     .form__row.form__row_1-col
                         .form__group
                             .label Did you go to the Hospital, ER, Urgent Care, or Private Doctor?
                             .form__row.form__row_2-col
                                 .form__group
-                                    label.radio.radio--full(for="no")
-                                        input.radio__input(type="radio" name="hospital" id="male" checked)
+                                    label.radio.radio--full(for="noH")
+                                        input.radio__input(type="radio" name="hospital" id="noH" checked)
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
-                                    label.radio.radio--full(for="yes")
-                                        input.radio__input(type="radio" name="hospital" id="yes" )
+                                    label.radio.radio--full(for="yesH")
+                                        input.radio__input(type="radio" name="hospital" id="yesH" )
                                         span.radio__label 
                                             span.radio__label-inside Yes
+                            .form__row.form__row_1-col(style="display:none;")
+                                .form__group 
+                                    input.input.input--full(type="text" placeholder="Which hospital or facility?")
                     .form__row.form__row_1-col
                         .form__group
                             .label Have you had X-rays or MRIs done prior to today’s visit?
                             .form__row.form__row_2-col
                                 .form__group
-                                    label.radio.radio--full(for="no")
-                                        input.radio__input(type="radio" name="xray" id="male" checked)
+                                    label.radio.radio--full(for="noX")
+                                        input.radio__input(type="radio" name="xray" id="noX" checked)
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
-                                    label.radio.radio--full(for="yes")
-                                        input.radio__input(type="radio" name="xray" id="yes" )
+                                    label.radio.radio--full(for="yesX")
+                                        input.radio__input(type="radio" name="xray" id="yesX" )
                                         span.radio__label 
                                             span.radio__label-inside Yes
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="name") Are you doing Physical Therapy or Chiropractic Treatment?
+                            select.select.select--full()
+                                option(value="1") Physical Therapy
+                                option(value="2") Chiropractic Treatment
+                                option(value="3") Both
                     .form__btns 
-                        a.btn.btn_primary(href="step-2.html") Next step
+                        a.btn.btn_secondary(href="step-1.html") Previous step
+                        a.btn.btn_primary(href="step-3.html") Next step
 block footer

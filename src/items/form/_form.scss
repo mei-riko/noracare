@@ -44,9 +44,14 @@
     &__btns{
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: auto auto;
 
         justify-content: flex-end;
 
         margin-top: 24px;
+
+        &_single{
+            grid-template-columns: auto;
+        }
     }
 }

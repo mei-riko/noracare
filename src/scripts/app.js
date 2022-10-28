@@ -17,9 +17,14 @@ $(function() {
         e.preventDefault();
     })
     // Fancybox
-    Fancybox.bind("[data-fancybox]", {
-        autoFocus: false,
-        dragToClose: false,
+    // Fancybox.bind("[data-fancybox]", {
+    //     autoFocus: false,
+    //     dragToClose: false,
+    // });
+
+    // Radio Change
+    $("input[name='hospital']").on("change", function(){
+        console.log('1');
     });
 });
 

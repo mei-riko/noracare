@@ -355,7 +355,7 @@ html.hidden, body.hidden {
 
 p {
   font-size: 1rem;
-  letter-spacing: -0.41px;
+  letter-spacing: -0.41 px;
   margin-top: 0;
   margin-bottom: 12px;
 }
@@ -512,8 +512,10 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   display: inline-block;
   text-align: center;
   font-weight: 500;
+  line-height: 22px;
   border-radius: 10px;
-  padding: 13px 20px 13px 20px;
+  border: 1px solid;
+  padding: 12px 20px 12px 20px;
   outline: unset;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -531,11 +533,21 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .btn_primary {
   color: #F8F8F8;
   background-color: #2D333D;
+  border-color: #2D333D;
 }
 
 .btn_primary:hover, .btn_primary:focus {
   color: #F8F8F8;
   background-color: #52402F;
+}
+
+.btn_secondary {
+  border-color: #2D333D;
+}
+
+.btn_secondary:hover {
+  border-color: #917154;
+  color: #917154;
 }
 
 .steps {
@@ -602,12 +614,15 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 }
 
 .input {
+  padding: 13px 16px;
   border-radius: 12px;
-  padding: 14px 16px;
-  outline: none;
   border: 1px solid #F4F8F9;
   background-color: #F4F8F9;
   color: #424242;
+  outline: none;
+  font-size: 15px;
+  line-height: 20px;
+  max-height: 48px;
 }
 
 .input::-webkit-input-placeholder {
@@ -703,17 +718,21 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .radio__label {
   border: 1px solid #A2B4BC;
   border-radius: 12px;
-  padding: 14px 16px;
+  padding: 13px 16px;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .select {
   display: inline-block;
+  font-size: 15px;
+  line-height: 20px;
+  border: 1px solid #F4F8F9;
   border-radius: 12px;
   padding: 14px 16px;
   outline: none;
-  border: 1px solid #F4F8F9;
   background-color: #F4F8F9;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='%23A2B4BC' stroke='none' d='M5 8L10 13L15 8H5Z'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-size: 18px;
   background-position: right .75rem center;
@@ -782,10 +801,15 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .form__btns {
   display: grid;
   grid-gap: 16px;
+  grid-template-columns: auto auto;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
   margin-top: 24px;
+}
+
+.form__btns_single {
+  grid-template-columns: auto;
 }
 
 .content {

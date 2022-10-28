@@ -64,6 +64,9 @@
     &__label{
         border: 1px solid $text-secondary-1;
         border-radius: 12px;
-        padding: 14px 16px;
+        padding: 13px 16px;
+
+        font-size: map-get($map: $font-size, $key: sm);
+        line-height: 20px;
     }
 }

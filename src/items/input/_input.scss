@@ -10,6 +10,10 @@
         color: $text-secondary-1;
     }
 
+    &:focus{
+        border-color: $text-secondary-2;
+    }
+    
     &--full{
         width: 100%;
     }

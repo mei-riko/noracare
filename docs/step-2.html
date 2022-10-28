@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Nora Care</title>
-    <link href="./css/fonts.css" rel="stylesheet"/>
+    <link href="./css/sf-pro-display.css" rel="stylesheet"/>
     <link href="./css/main.css" rel="stylesheet"/>
   </head>
   <body>
@@ -44,20 +44,43 @@
             <div class="form__row form__row_1-col">
               <div class="form__group">
                 <label class="label" for="name">The patient was a:</label>
+                <select class="select select--full">
+                  <option value="1">restrained driver</option>
+                  <option value="2">unrestrained driver</option>
+                  <option value="3">front-seat passenger</option>
+                  <option value="4">back-seat passenger</option>
+                </select>
               </div>
             </div>
             <div class="form__row form__row_1-col">
               <div class="form__group">
-                <div class="label">Gender:</div>
+                <div class="label">Did you go to the Hospital, ER, Urgent Care, or Private Doctor?</div>
                 <div class="form__row form__row_2-col">
                   <div class="form__group">
-                    <label class="radio radio--full" for="male">
-                      <input class="radio__input" type="radio" name="gender" id="male" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">Male</span></span>
+                    <label class="radio radio--full" for="no">
+                      <input class="radio__input" type="radio" name="hospital" id="male" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
                     </label>
                   </div>
                   <div class="form__group">
-                    <label class="radio radio--full" for="female">
-                      <input class="radio__input" type="radio" name="gender" id="female"/><span class="radio__label"> <span class="radio__label-inside">Female</span></span>
+                    <label class="radio radio--full" for="yes">
+                      <input class="radio__input" type="radio" name="hospital" id="yes"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col">
+              <div class="form__group">
+                <div class="label">Have you had X-rays or MRIs done prior to today’s visit?</div>
+                <div class="form__row form__row_2-col">
+                  <div class="form__group">
+                    <label class="radio radio--full" for="no">
+                      <input class="radio__input" type="radio" name="xray" id="male" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                    </label>
+                  </div>
+                  <div class="form__group">
+                    <label class="radio radio--full" for="yes">
+                      <input class="radio__input" type="radio" name="xray" id="yes"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
                     </label>
                   </div>
                 </div>

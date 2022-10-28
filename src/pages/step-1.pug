@@ -1,0 +1,98 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle = "Nora Care"
+block content
+    .content 
+        .content__col
+            .sidebar.sidebar_content
+                img.sidebar__logo.sidebar__logo_full(src="../img/logo-full.png")
+                .sidebar__intro
+                    h1.h2 Hi, Customer!
+                    p Lorem ipsum dolor sit amet,  sectetur adipiscing elit
+                    .steps
+                        .steps__item.steps__item--active
+                            .steps__item-num.steps__item-num--active 1
+                            .steps__item-name Basic information
+                        .steps__item
+                            .steps__item-num 2
+                            .steps__item-name History of present illness
+                        .steps__item
+                            .steps__item-num 3
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 4
+                            .steps__item-name Past surgical history
+            .sidebar
+                p Today’s date
+                input.input.input--full.input_date(type="date" placeholder="06-10-2022")
+        .content__col
+            .content__block.content__block--full
+                .form 
+                    p.h3.form__title Patient’s Personal Data
+                    .form__row.form__row_2-col
+                        .form__group
+                            label.label(for="name") Full Name:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="date") Date of Birth:
+                            input.input.input--full.input_date(type="date" placeholder="06-10-2022")
+                    .form__row.form__row_3-col
+                        .form__group
+                            label.label(for="age") Age:
+                            input.input.input--full(type="text" data-mask="number")
+                        .form__group
+                            label.label(for="height") Height:
+                            input.input.input--full(type="text" data-mask="height")
+                        .form__group
+                            label.label(for="weight") Weight:
+                            .form__input-parent
+                                input.input.input--full.form__input-child(type="text" data-mask="number")
+                                span.form__input-size lbs
+                    .form__row.form__row_1-col
+                        .form__group
+                            .label Gender:
+                            .form__row.form__row_3-col
+                                .form__group
+                                    label.radio.radio--full(for="male")
+                                        input.radio__input(type="radio" name="gender" id="male" checked)
+                                        span.radio__label 
+                                            span.radio__label-inside Male
+                                .form__group
+                                    label.radio.radio--full(for="female")
+                                        input.radio__input(type="radio" name="gender" id="female" )
+                                        span.radio__label 
+                                            span.radio__label-inside Female
+                                .form__group
+                                    label.radio.radio--full(for="other")
+                                        input.radio__input(type="radio" name="gender" id="other")
+                                        span.radio__label 
+                                            span.radio__label-inside Other
+                    p.h3.form__title Accident Info
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="date") Date of Accident:
+                            input.input.input--full.input_date(type="date" placeholder="06-10-2022")
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="gender") Type of Accident:
+                            .form__row.form__row_3-col
+                                .form__group
+                                    label.radio.radio--full(for="nf")
+                                        input.radio__input(type="radio" name="accident" id="nf" checked)
+                                        span.radio__label 
+                                            span.radio__label-inside NF
+                                .form__group
+                                    label.radio.radio--full(for="wc")
+                                        input.radio__input(type="radio" name="accident" id="wc" )
+                                        span.radio__label 
+                                            span.radio__label-inside WC
+                                .form__group
+                                    label.radio.radio--full(for="lien")
+                                        input.radio__input(type="radio" name="accident" id="lien")
+                                        span.radio__label 
+                                            span.radio__label-inside LIEN
+                    .form__btns 
+                        a.btn.btn_primary(href="step-2.html") Next step
+
+block footer

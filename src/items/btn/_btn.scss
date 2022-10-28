@@ -1,0 +1,20 @@
+.btn{
+    display: inline-block;
+
+    text-align: center;
+    font-weight: $font-weight-bolder;
+
+    border-radius: 10px;
+    padding: 13px 20px 13px 20px;
+    outline: unset;
+
+    transition: $transition-base;
+
+    &:hover, &:focus{
+        text-decoration: none;
+    }
+
+    &--full{
+        width: 100%;
+    }
+}

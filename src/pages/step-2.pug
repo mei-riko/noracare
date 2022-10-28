@@ -1,0 +1,49 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle = "Nora Care"
+block content
+    .content 
+        .content__col
+            .sidebar.sidebar_content
+                img.sidebar__logo.sidebar__logo_full(src="../img/logo-full.png")
+                .sidebar__intro
+                    h1.h2 25% filled
+                    p Nice to meet you, John Jameson! You are filled part 1 of our question’s list
+                    .steps
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 1
+                            .steps__item-name Basic information
+                        .steps__item.steps__item--active
+                            .steps__item-num.steps__item-num--active 2
+                            .steps__item-name History of present illness
+                        .steps__item
+                            .steps__item-num 3
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 4
+                            .steps__item-name Past surgical history
+        .content__col
+            .content__block.content__block--full
+                .form 
+                    p.h3.form__title History of present illness
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="name") The patient was a:
+                    .form__row.form__row_1-col
+                        .form__group
+                            .label Gender:
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.radio.radio--full(for="male")
+                                        input.radio__input(type="radio" name="gender" id="male" checked)
+                                        span.radio__label 
+                                            span.radio__label-inside Male
+                                .form__group
+                                    label.radio.radio--full(for="female")
+                                        input.radio__input(type="radio" name="gender" id="female" )
+                                        span.radio__label 
+                                            span.radio__label-inside Female
+                    .form__btns 
+                        a.btn.btn_primary(href="step-2.html") Next step
+block footer

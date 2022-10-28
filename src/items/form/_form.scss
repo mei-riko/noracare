@@ -1,0 +1,52 @@
+.form{
+    &__title{
+        margin-top: 24px;
+        margin-bottom: map-get($map: $spacers, $key: 2);
+
+        &:first-child{
+            margin-top: 0px;
+        }
+    }
+    &__row{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+        
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &_1-col{
+            grid-template-columns: 1fr;
+        }
+        &_2-col{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &_3-col{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    &__input-parent{
+        position: relative;
+    }
+    &__input-child{
+        padding-right: 48px;
+    }
+    &__input-size{
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        font-size: map-get($map: $font-size, $key: xs);
+        color: $text-secondary-1;
+
+        max-width: 48px;
+        overflow: hidden;
+    }
+    &__btns{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+
+        justify-content: flex-end;
+
+        margin-top: 24px;
+    }
+}

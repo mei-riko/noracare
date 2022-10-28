@@ -1,0 +1,12 @@
+.label{
+    display: block;
+    padding: map-get($map: $spacers, $key: 1) map-get($map: $spacers, $key: 2);
+    margin-bottom: 0px;
+
+    font-size: map-get($map: $font-size, $key: sm);
+    font-weight: $font-weight-bolder;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+
+    color: $text-secondary-1;
+}

@@ -1,0 +1,129 @@
+$white                : #FFFFFF;
+$black                : #2D333D;
+
+$golden-1             : #917154;
+$golden-2             : #52402F;
+
+$text-light           : #F8F8F8;
+$text-dark            : #424242;
+$text-secondary-1     : #A2B4BC;
+$text-secondary-2     : #C6DAE2;
+
+$input                : #F4F8F9;
+
+$red                  : #D70015;
+$grey                 : #F2F5F5;
+
+$body-color           : $black;
+$body-bg              : $grey;
+
+$border-color         : $black;
+$border-radius        : 22px;
+
+$link-color           : $black !default;
+$link-hover-color     : $golden-2 !default;
+$link-decoration      : none !default;
+$link-hover-decoration: underline !default;
+
+$transition-base      : 0.3s;
+
+$grid-breakpoints: (
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+) !default;
+
+// $container-max-widths: (
+//   xs: 100%,
+//   sm: 100%,
+//   md: 100%,
+//   lg: 100%,
+//   xl: 100%,
+//   hd: 100%,
+// ) !default;
+
+
+$font-weight          : 400;
+$font-weight-bolder   : 500;
+$font-weight-bold     : 700;
+
+$dt-font-weight       : $font-weight-bold !default;
+
+$line-height          : 1.6;
+$line-height-base     : 1.4;
+
+$font-size-base       : 1rem;
+$font-weight-base     : $font-weight;
+
+$font-family-heading  : "SF Pro Display", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-base     : "SF Pro Display", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
+
+$font-size: (
+  xs: 12px,
+  sm: 15px,
+  md: 17px,
+  lg: 20px
+) !default;
+
+$heading: (
+  h1: 38px,
+  h2: 28px,
+  h3: 20px,
+  // h4: 24px,
+  // h5: 20px,
+  // h6: 18px,
+) !default;
+
+$letter-spacing       : 0.04em;
+
+$grid-columns         : 12 !default;
+$grid-gutter-width    : 40px !default;
+
+$spacer-gutter        : 12px !default;
+
+$spacer : 16px!default;
+$spacers: ()  !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: 8px,
+    2: 16px,
+    3: 32px,
+    4: 64px,
+    5: 96px
+  ),
+  $spacers
+);
+
+$headings-margin-bottom: $spacer !default;
+$headings-font-family  : null !default;
+$headings-font-weight  : 700 !default;
+$headings-line-height  : 1.2 !default;
+$headings-color        : null !default;
+
+$paragraph-margin-bottom: $spacer-gutter !default;
+
+$table-cell-padding   : 10px !default;
+$table-cell-padding-sm: 6px !default;
+$table-caption-color  : #242424 !default;
+
+$label-margin-bottom: 10px;
+
+$enable-grid-classes              : true !default;
+$enable-pointer-cursor-for-buttons: true !default;
+
+// Utilities
+
+$displays : none,   inline,   inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$overflows: auto,   hidden !default;
+$positions: static, relative, absolute,     fixed, sticky !default;
+
+
+// Printing
+
+$print-page-size     : a3 !default;
+$print-body-min-width: map-get($grid-breakpoints, "lg") !default;

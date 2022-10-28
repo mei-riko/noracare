@@ -1,0 +1,48 @@
+.steps{
+    padding-top: map-get($map: $spacers, $key: 2);
+
+    &__item{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: 24px 1fr;
+
+        align-items: center;
+
+        font-size: map-get($map: $font-size, $key: sm);
+        letter-spacing: -0.5px;
+        color: $text-secondary-1;
+
+        margin-top: map-get($map: $spacers, $key: 2);
+
+        &--active{
+            color: $text-dark;
+        }
+        &--filled{
+            color: $text-dark;
+        }
+    }
+    &__item-num{
+        width: 24px;
+        height: 24px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        border: 1px solid $text-secondary-1;
+
+        font-size: map-get($map: $font-size, $key: xs);
+
+        &--active{
+            border-color: $text-dark;
+        }
+        &--filled{
+            color: rgba(45,51,61,0);
+            border-color: $text-dark;
+            background: url("../img/stepNumFilled.svg") no-repeat center / contain;
+        }
+    }
+    &__item-name{
+    }
+}

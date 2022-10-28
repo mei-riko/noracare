@@ -1,0 +1,16 @@
+.input{
+    border-radius: 12px;
+    padding: 14px 16px;
+    outline: none;
+    border: 1px solid $input;
+    background-color: $input;
+    color: $text-dark;
+
+    &::placeholder{
+        color: $text-secondary-1;
+    }
+
+    &--full{
+        width: 100%;
+    }
+}

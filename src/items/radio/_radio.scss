@@ -1,0 +1,69 @@
+.radio{
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 0;
+
+    &--full{
+        width: 100%;
+    }
+
+    &__input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        & + .radio__label{
+          
+            display: grid;
+            grid-template-columns: 18px auto;
+            grid-gap: 12px;
+
+            align-items: center;
+            user-select: none;
+
+            transition: $transition-base;
+
+            &::before{
+                content: '';
+
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+
+                flex-shrink: 0;
+                flex-grow: 0;
+
+                // border: 2px solid $text-secondary-1;
+                // border-radius: 50%;
+                background: url("../img/radioMark.svg") no-repeat center / contain;
+
+                transition: $transition-base;
+            }
+        }
+        // Hover
+        &:hover + .radio__label{
+            border-color: $text-secondary-2;
+            color: $text-secondary-1;
+            
+            &:before{
+                // border-color: $text-dark;
+                // filter: opacity(.5);
+            }
+        }
+        // Checked
+        &:checked + .radio__label{
+            border-color: $golden-1;
+            color: $golden-1;
+
+            &:before{
+                background: url("../img/radioMarkSelected.svg") no-repeat center / contain;
+                // border-color: $text-dark;
+            }
+        }
+    }
+    &__label{
+        border: 1px solid $text-secondary-1;
+        border-radius: 12px;
+        padding: 14px 16px;
+    }
+}

@@ -550,10 +550,6 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   color: #917154;
 }
 
-.steps {
-  padding-top: 16px;
-}
-
 .steps__item {
   display: grid;
   grid-gap: 16px;
@@ -958,7 +954,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 .content {
   display: grid;
   grid-gap: 16px;
-  grid-template-columns: 360px 1fr;
+  grid-template-columns: 340px 1fr;
   margin: 0 auto;
   max-width: 100%;
   min-height: 100vh;
@@ -975,15 +971,28 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   flex-direction: column;
 }
 
-.content__welcome-screen {
-  border-radius: 22px;
-  background: #FFFFFF url("../img/patients.jpg") no-repeat top right/cover;
+.content__grid {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.content__grid_2-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.content__grid_1-col {
+  grid-template-columns: 1fr;
 }
 
 .content__block {
   background-color: #FFFFFF;
   border-radius: 22px;
   padding: 32px;
+  margin-bottom: 16px;
+}
+
+.content__block:last-child {
+  margin-bottom: 0;
 }
 
 .content__block--full {
@@ -994,10 +1003,24 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   overflow: auto;
 }
 
+.content__subtitle {
+  color: #A2B4BC;
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.content__welcome-screen {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  background: #FFFFFF url("../img/patients.jpg") no-repeat top right/cover;
+}
+
 .sidebar {
   background-color: #FFFFFF;
   border-radius: 22px;
-  padding: 32px 64px 32px 32px;
+  padding: 32px;
   margin-bottom: 16px;
 }
 
@@ -1020,6 +1043,17 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 .sidebar__intro {
   margin-bottom: 32px;
+}
+
+.sidebar__intro:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar__btns {
+  margin-top: 32px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .sidebar_welcome-screen {

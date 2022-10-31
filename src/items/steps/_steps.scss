@@ -1,6 +1,5 @@
 .steps{
-    padding-top: map-get($map: $spacers, $key: 2);
-
+    // padding-top: map-get($map: $spacers, $key: 2);
     &__item{
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);

@@ -2,7 +2,7 @@
     background-color: $white;
     border-radius: $border-radius;
 
-    padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4) map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 3);
+    padding: map-get($map: $spacers, $key: 3);
     margin-bottom: map-get($map: $spacers, $key: 2);
 
     &:last-child{
@@ -22,5 +22,16 @@
     }
     &__intro{
         margin-bottom: map-get($map: $spacers, $key: 3);
+
+        &:last-child{
+            margin-bottom: map-get($map: $spacers, $key: 0);
+        }
+    }
+    &__btns{
+        margin-top: map-get($map: $spacers, $key: 3);
+
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: 1fr 1fr;
     }
 }

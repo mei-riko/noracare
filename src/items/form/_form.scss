@@ -41,6 +41,23 @@
         max-width: 48px;
         overflow: hidden;
     }
+    &__notification{
+        font-size: map-get($map: $font-size, $key: xs);
+        line-height: map-get($map: $line-height, $key: xs);
+        padding: map-get($map: $spacers, $key: 1) map-get($map: $spacers, $key: 2);
+        
+        &_error{
+            color: $red;
+        }
+    }
+    &__selected-tags{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        margin-left: -( map-get($map: $spacers, $key: 1) );
+        margin-right: -( map-get($map: $spacers, $key: 1) );
+    }
     &__btns{
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);

@@ -33,28 +33,56 @@ block content
                             .form__row.form__row_2-col
                                 .form__group
                                     label.radio.radio--full(for="noC")
-                                        input.radio__input(type="radio" name="conditions" id="noC" checked)
+                                        input.radio__input(type="radio" name="conditions" id="noC" value="no" checked data-hidden="#inputCondition")
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
                                     label.radio.radio--full(for="yesC")
-                                        input.radio__input(type="radio" name="conditions" id="yesC" )
+                                        input.radio__input(type="radio" name="conditions" id="yesC" value="yes" data-hidden="#inputCondition")
                                         span.radio__label 
                                             span.radio__label-inside Yes
+                    .form__row.form__row_1-col#inputCondition(style="display:none;")
+                        .form__group
+                            label.label(for="name") If yes, tick as appropriate:
+                            //- Select with dynamic options https://select2.org/tagging
+                            select.select.select--full()
+                                option(value="" disabled selected) Choose something...
+                                option(value="1") Diabetes
+                                option(value="2") High blood pressure
+                                option(value="3") High cholestrol
+                            .form__selected-tags
+                                .tag Diabetes
+                                    svg.tag__close-icon(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z")
+                                .tag S/P Lumpus ESI
+                                    svg.tag__close-icon(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                        path(d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z")
                     .form__row.form__row_1-col
                         .form__group
                             .label Are you currently taking any medications, including pain medications?
                             .form__row.form__row_2-col
                                 .form__group
                                     label.radio.radio--full(for="noM")
-                                        input.radio__input(type="radio" name="medications" id="noM" checked)
+                                        input.radio__input(type="radio" name="medications" id="noM" value="no" checked data-hidden="#inputMedication")
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
                                     label.radio.radio--full(for="yesM")
-                                        input.radio__input(type="radio" name="medications" id="yesM" )
+                                        input.radio__input(type="radio" name="medications" id="yesM" value="yes" data-hidden="#inputMedication")
                                         span.radio__label 
                                             span.radio__label-inside Yes
+                    .form__row.form__row_1-col#inputMedication(style="display:none;")
+                        .form__group
+                            label.label(for="name") If yes, please list the medications you are taking:
+                            //- Select with dynamic options https://select2.org/tagging
+                            select.select.select--full()
+                                option(value="" disabled selected) Choose something...
+                                option(value="1") medication 1
+                                option(value="2") medication 2
+                                option(value="3") medication 3
+                                option(value="4") medication 4
+                                option(value="5") medication 5
+                                option(value="6") medication 6
                     .form__btns 
                         a.btn.btn_secondary(href="step-2.html") Previous step
                         a.btn.btn_primary(href="step-4.html") Next step

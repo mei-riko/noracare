@@ -72,7 +72,8 @@ block content
                     .form__row.form__row_1-col
                         .form__group
                             label.label(for="date") Date of Accident:
-                            input.input.input--full.input_date(type="date" placeholder="06-10-2022")
+                            input.input.input--full.input--error.input_date(type="date" placeholder="06-10-2022")
+                            .form__notification.form__notification_error Required field
                     .form__row.form__row_1-col
                         .form__group
                             label.label(for="gender") Type of Accident:
@@ -93,6 +94,6 @@ block content
                                         span.radio__label 
                                             span.radio__label-inside LIEN
                     .form__btns.form__btns_single
-                        a.btn.btn_primary(href="step-1-has-error.html") Next step
+                        a.btn.btn_primary(href="step-2.html") Next step
 
 block footer

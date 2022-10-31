@@ -1,0 +1,90 @@
+extends ../blocks/main.pug
+
+block variables
+    - var pageTitle = "Nora Care"
+block content
+    .content 
+        .content__col
+            .sidebar.sidebar_content
+                img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
+                .sidebar__intro
+                    h1.h2 75% filled
+                    p Nice to meet you, John Jameson! You are filled part 1-3  of our question’s list
+                    .steps
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 1
+                            .steps__item-name Basic information
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 2
+                            .steps__item-name History of present illness
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 3
+                            .steps__item-name Medical history
+                        .steps__item.steps__item--active
+                            .steps__item-num.steps__item-num--active 4
+                            .steps__item-name Past surgical history
+        .content__col
+            .content__block.content__block--full
+                .form 
+                    p.h3.form__title Past surgical history 
+                    .form__row.form__row_1-col
+                        .form__group
+                            .label Have you had any prior surgeries?
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.radio.radio--full(for="noS")
+                                        input.radio__input(type="radio" name="surgeries" id="noS" value="no" checked)
+                                        span.radio__label 
+                                            span.radio__label-inside No
+                                .form__group
+                                    label.radio.radio--full(for="yesS")
+                                        input.radio__input(type="radio" name="surgeries" id="yesS" value="yes")
+                                        span.radio__label 
+                                            span.radio__label-inside Yes
+                    .form__row.form__row_1-col
+                        .form__group
+                            .label If yes, please list any prior surgeries you have had:
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.checkbox.checkbox--full(for="surgeriesList1")
+                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate1" id="surgeriesList1" value="")
+                                        span.checkbox__label 
+                                            span.checkbox__label-inside Right shoulder arthroscopy
+                                .form__group
+                                    input.input.input--full.input_date#inputDate1(type="date" placeholder="06-10-2022" disabled="true")
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.checkbox.checkbox--full(for="surgeriesList2")
+                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate2" id="surgeriesList2" value="")
+                                        span.checkbox__label 
+                                            span.checkbox__label-inside Left shoulder arthroscopy
+                                .form__group
+                                    input.input.input--full.input_date#inputDate2(type="date" placeholder="06-10-2022" disabled="true")
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.checkbox.checkbox--full(for="surgeriesList3")
+                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate3" id="surgeriesList3" value="")
+                                        span.checkbox__label 
+                                            span.checkbox__label-inside Right knee arthroscopy
+                                .form__group
+                                    input.input.input--full.input_date#inputDate3(type="date" placeholder="06-10-2022" disabled="true")
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.checkbox.checkbox--full(for="surgeriesList4")
+                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate4" id="surgeriesList4" value="")
+                                        span.checkbox__label 
+                                            span.checkbox__label-inside Left knee arthroscopy
+                                .form__group
+                                    input.input.input--full.input_date#inputDate4(type="date" placeholder="06-10-2022" disabled="true")
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.checkbox.checkbox--full(for="surgeriesList5")
+                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate5" id="surgeriesList5" value="")
+                                        span.checkbox__label 
+                                            span.checkbox__label-inside Cervical surgery
+                                .form__group
+                                    input.input.input--full.input_date#inputDate5(type="date" placeholder="06-10-2022" disabled="true")
+                    .form__btns 
+                        a.btn.btn_secondary(href="step-2.html") Previous step
+                        a.btn.btn_primary(href="step-4.html") Next step
+block footer

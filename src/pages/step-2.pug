@@ -54,15 +54,15 @@ block content
                             .form__row.form__row_2-col
                                 .form__group
                                     label.radio.radio--full(for="noH")
-                                        input.radio__input(type="radio" name="hospital" id="noH" checked)
+                                        input.radio__input(type="radio" name="hospital" id="noH" value="no" checked data-hidden="#inputHospital")
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
                                     label.radio.radio--full(for="yesH")
-                                        input.radio__input(type="radio" name="hospital" id="yesH" )
+                                        input.radio__input(type="radio" name="hospital" id="yesH" value="yes" data-hidden="#inputHospital")
                                         span.radio__label 
                                             span.radio__label-inside Yes
-                            .form__row.form__row_1-col(style="display:none;")
+                            .form__row.form__row_1-col#inputHospital(style="display:none;")
                                 .form__group 
                                     input.input.input--full(type="text" placeholder="Which hospital or facility?")
                     .form__row.form__row_1-col

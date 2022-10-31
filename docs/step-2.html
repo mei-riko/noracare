@@ -74,16 +74,16 @@
                 <div class="form__row form__row_2-col">
                   <div class="form__group">
                     <label class="radio radio--full" for="noH">
-                      <input class="radio__input" type="radio" name="hospital" id="noH" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                      <input class="radio__input" type="radio" name="hospital" id="noH" value="no" checked="checked" data-hidden="#inputHospital"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
                     </label>
                   </div>
                   <div class="form__group">
                     <label class="radio radio--full" for="yesH">
-                      <input class="radio__input" type="radio" name="hospital" id="yesH"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                      <input class="radio__input" type="radio" name="hospital" id="yesH" value="yes" data-hidden="#inputHospital"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
                     </label>
                   </div>
                 </div>
-                <div class="form__row form__row_1-col" style="display:none;">
+                <div class="form__row form__row_1-col" id="inputHospital" style="display:none;">
                   <div class="form__group"> 
                     <input class="input input--full" type="text" placeholder="Which hospital or facility?"/>
                   </div>

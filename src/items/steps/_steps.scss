@@ -33,6 +33,7 @@
         border: 1px solid $text-secondary-1;
 
         font-size: map-get($map: $font-size, $key: xs);
+        line-height: map-get($line-height, 'xs');
 
         &--active{
             border-color: $text-dark;

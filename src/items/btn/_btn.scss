@@ -3,7 +3,7 @@
 
     text-align: center;
     font-weight: $font-weight-bolder;
-    line-height: 22px;
+    line-height: map-get($line-height, 'md');
 
     border-radius: 10px;
     border: 1px solid;

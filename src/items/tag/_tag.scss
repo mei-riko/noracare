@@ -1,0 +1,26 @@
+.tag{
+    padding: map-get($map: $spacers, $key: 1);
+    padding-left: map-get($map: $spacers, $key: 2);
+    border-radius: 8px;
+    border: 1px solid $text-secondary-2;
+
+    display: inline-flex;
+    align-items: center;
+
+    font-size: map-get($map: $font-size, $key: sm);
+    line-height: map-get($map: $line-height, $key: sm);
+
+    margin: map-get($map: $spacers, $key: 1) map-get($map: $spacers, $key: 1) map-get($map: $spacers, $key: 0);
+
+    &__close-icon{
+        fill: $text-secondary-2;
+        margin-left: map-get($map: $spacers, $key: 1);
+
+        cursor: pointer;
+        transition: $transition-base;
+
+        &:hover{
+            fill: $text-secondary-1;
+        }
+    }
+}

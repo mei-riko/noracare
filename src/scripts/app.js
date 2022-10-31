@@ -23,8 +23,35 @@ $(function() {
     // });
 
     // Radio Change
-    $("input[name='hospital']").on("change", function(){
-        console.log('1');
+    $(".radio .radio__input").on("change", function(){
+        if( $(this).data("hidden") ){
+            let id = $(this).data("hidden");
+            let value = $(this).val();
+            if( value === "yes" ){
+                $(id).slideDown();
+            }else{
+                $(id).slideUp();
+            }
+        }else{
+            return null;
+        }
+    });
+    // Checkbox Change
+    $(".checkbox .checkbox__input").on("change", function(){
+        if( $(this).data("activate") ){
+            let id = $(this).data("activate");
+            let disabledValue = $(id).prop('disabled');
+            
+            if( disabledValue ){
+                $(id).prop('disabled', false);
+                console.log( id );
+                console.log( disabledValue );
+            }else{
+                $(id).prop('disabled', true);
+            }
+        }else{
+            return null;
+        }
     });
 });
 

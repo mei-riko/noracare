@@ -18,11 +18,15 @@
     background-position: right .75rem center;
 
     color: $text-dark;
-
+    
+    transition: $transition-base;
     appearance: none;
 
     &:hover, &:focus{
         outline: unset;
+    }
+    &:focus{
+        border-color: $text-secondary-2;
     }
 
     &--full{

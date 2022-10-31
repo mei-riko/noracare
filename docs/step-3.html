@@ -47,13 +47,36 @@
                 <div class="form__row form__row_2-col">
                   <div class="form__group">
                     <label class="radio radio--full" for="noC">
-                      <input class="radio__input" type="radio" name="conditions" id="noC" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                      <input class="radio__input" type="radio" name="conditions" id="noC" value="no" checked="checked" data-hidden="#inputCondition"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
                     </label>
                   </div>
                   <div class="form__group">
                     <label class="radio radio--full" for="yesC">
-                      <input class="radio__input" type="radio" name="conditions" id="yesC"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                      <input class="radio__input" type="radio" name="conditions" id="yesC" value="yes" data-hidden="#inputCondition"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
                     </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col" id="inputCondition" style="display:none;">
+              <div class="form__group">
+                <label class="label" for="name">If yes, tick as appropriate:</label>
+                <select class="select select--full">
+                  <option value="" disabled="disabled" selected="selected">Choose something...</option>
+                  <option value="1">Diabetes</option>
+                  <option value="2">High blood pressure</option>
+                  <option value="3">High cholestrol</option>
+                </select>
+                <div class="form__selected-tags">
+                  <div class="tag">Diabetes
+                    <svg class="tag__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z"></path>
+                    </svg>
+                  </div>
+                  <div class="tag">S/P Lumpus ESI
+                    <svg class="tag__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z"></path>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -64,15 +87,29 @@
                 <div class="form__row form__row_2-col">
                   <div class="form__group">
                     <label class="radio radio--full" for="noM">
-                      <input class="radio__input" type="radio" name="medications" id="noM" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                      <input class="radio__input" type="radio" name="medications" id="noM" value="no" checked="checked" data-hidden="#inputMedication"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
                     </label>
                   </div>
                   <div class="form__group">
                     <label class="radio radio--full" for="yesM">
-                      <input class="radio__input" type="radio" name="medications" id="yesM"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                      <input class="radio__input" type="radio" name="medications" id="yesM" value="yes" data-hidden="#inputMedication"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
                     </label>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col" id="inputMedication" style="display:none;">
+              <div class="form__group">
+                <label class="label" for="name">If yes, please list the medications you are taking:</label>
+                <select class="select select--full">
+                  <option value="" disabled="disabled" selected="selected">Choose something...</option>
+                  <option value="1">medication 1</option>
+                  <option value="2">medication 2</option>
+                  <option value="3">medication 3</option>
+                  <option value="4">medication 4</option>
+                  <option value="5">medication 5</option>
+                  <option value="6">medication 6</option>
+                </select>
               </div>
             </div>
             <div class="form__btns"> <a class="btn btn_secondary" href="step-2.html">Previous step</a><a class="btn btn_primary" href="step-4.html">Next step</a></div>

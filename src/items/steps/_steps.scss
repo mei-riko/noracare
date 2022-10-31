@@ -19,6 +19,10 @@
         &--filled{
             color: $text-dark;
         }
+
+        &:first-child{
+            margin-top: 0;
+        }
     }
     &__item-num{
         width: 24px;

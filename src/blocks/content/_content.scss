@@ -25,6 +25,10 @@
         &_1-col{
             grid-template-columns: 1fr;
         }
+
+        &_final{
+            grid-template-columns: 1fr 1fr;
+        }
     }
     // Main Inside Component
     &__block{
@@ -58,5 +62,43 @@
 
         border-radius: $border-radius;
         background: $white url('../img/patients.jpg') no-repeat top right / cover;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content{
+        &__grid{
+            &_final{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content{
+        display: flex;
+        flex-direction: column;
+
+        &__grid{
+            &_final{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        // Stylized Block
+        &__welcome-screen{
+            flex-grow: 1;
+            height: auto;
+            min-height: 320px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content{
+        &__grid{
+            &_final{
+                grid-template-columns: 1fr;
+            }
+        }
     }
 }

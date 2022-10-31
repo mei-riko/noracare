@@ -13,26 +13,28 @@
     <div class="content"> 
       <div class="content__col">
         <div class="sidebar sidebar_content"><img class="sidebar__logo sidebar__logo_full" src="./img/logo-full.png"/>
-          <div class="sidebar__intro">
-            <h1 class="h2">Hi, Customer!</h1>
-            <p>Lorem ipsum dolor sit amet,  sectetur adipiscing elit</p>
-          </div>
-          <div class="steps">
-            <div class="steps__item steps__item--active">
-              <div class="steps__item-num steps__item-num--active">1</div>
-              <div class="steps__item-name">Basic information</div>
+          <div class="sidebar__content sidebar__content_w-steps">
+            <div class="sidebar__intro">
+              <h1 class="h2">Hi, Customer!</h1>
+              <p>Lorem ipsum dolor sit amet,  sectetur adipiscing elit</p>
             </div>
-            <div class="steps__item">
-              <div class="steps__item-num">2</div>
-              <div class="steps__item-name">History of present illness</div>
-            </div>
-            <div class="steps__item">
-              <div class="steps__item-num">3</div>
-              <div class="steps__item-name">Medical history</div>
-            </div>
-            <div class="steps__item">
-              <div class="steps__item-num">4</div>
-              <div class="steps__item-name">Past surgical history</div>
+            <div class="steps">
+              <div class="steps__item steps__item--active">
+                <div class="steps__item-num steps__item-num--active">1</div>
+                <div class="steps__item-name">Basic information</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">2</div>
+                <div class="steps__item-name">History of present illness</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">3</div>
+                <div class="steps__item-name">Medical history</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">4</div>
+                <div class="steps__item-name">Past surgical history</div>
+              </div>
             </div>
           </div>
         </div>
@@ -45,7 +47,7 @@
         <div class="content__block content__block--full">
           <div class="form"> 
             <p class="h3 form__title">Patient’s Personal Data</p>
-            <div class="form__row form__row_2-col">
+            <div class="form__row form__row_name-bday">
               <div class="form__group">
                 <label class="label" for="name">Full Name:</label>
                 <input class="input input--full" type="text"/>
@@ -55,7 +57,7 @@
                 <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
               </div>
             </div>
-            <div class="form__row form__row_3-col">
+            <div class="form__row form__row_age-param">
               <div class="form__group">
                 <label class="label" for="age">Age:</label>
                 <input class="input input--full" type="text" data-mask="number"/>
@@ -71,10 +73,10 @@
                 </div>
               </div>
             </div>
-            <div class="form__row form__row_1-col">
+            <div class="form__row form__row_full-width">
               <div class="form__group">
                 <div class="label">Gender:</div>
-                <div class="form__row form__row_3-col">
+                <div class="form__row form__row_gender">
                   <div class="form__group">
                     <label class="radio radio--full" for="male">
                       <input class="radio__input" type="radio" name="gender" id="male" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">Male</span></span>
@@ -94,16 +96,16 @@
               </div>
             </div>
             <p class="h3 form__title">Accident Info</p>
-            <div class="form__row form__row_1-col">
+            <div class="form__row form__row_full-width">
               <div class="form__group">
                 <label class="label" for="date">Date of Accident:</label>
                 <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
               </div>
             </div>
-            <div class="form__row form__row_1-col">
+            <div class="form__row form__row_full-width">
               <div class="form__group">
                 <label class="label" for="gender">Type of Accident:</label>
-                <div class="form__row form__row_3-col">
+                <div class="form__row form__row_accident">
                   <div class="form__group">
                     <label class="radio radio--full" for="nf">
                       <input class="radio__input" type="radio" name="accident" id="nf" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">NF</span></span>

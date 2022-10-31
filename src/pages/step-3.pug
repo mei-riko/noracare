@@ -7,30 +7,31 @@ block content
         .content__col
             .sidebar.sidebar_content
                 img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
-                .sidebar__intro
-                    h1.h2 50% filled
-                    p Nice to meet you, John Jameson! You are filled part 1 of our question’s list
-                .steps
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 1
-                        .steps__item-name Basic information
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 2
-                        .steps__item-name History of present illness
-                    .steps__item.steps__item--active
-                        .steps__item-num.steps__item-num--active 3
-                        .steps__item-name Medical history
-                    .steps__item
-                        .steps__item-num 4
-                        .steps__item-name Past surgical history
+                .sidebar__content.sidebar__content_w-steps
+                    .sidebar__intro
+                        h1.h2 50% filled
+                        p Nice to meet you, John Jameson! You are filled part 1 of our question’s list
+                    .steps
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 1
+                            .steps__item-name Basic information
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 2
+                            .steps__item-name History of present illness
+                        .steps__item.steps__item--active
+                            .steps__item-num.steps__item-num--active 3
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 4
+                            .steps__item-name Past surgical history
         .content__col
             .content__block.content__block--full
                 .form 
                     p.h3.form__title Medical history 
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             .label Do you have any medical conditions?
-                            .form__row.form__row_2-col
+                            .form__row.form__row_boolean
                                 .form__group
                                     label.radio.radio--full(for="noC")
                                         input.radio__input(type="radio" name="conditions" id="noC" value="no" checked data-hidden="#inputCondition")
@@ -41,7 +42,7 @@ block content
                                         input.radio__input(type="radio" name="conditions" id="yesC" value="yes" data-hidden="#inputCondition")
                                         span.radio__label 
                                             span.radio__label-inside Yes
-                    .form__row.form__row_1-col#inputCondition(style="display:none;")
+                    .form__row.form__row_full-width#inputCondition(style="display:none;")
                         .form__group
                             label.label(for="name") If yes, tick as appropriate:
                             //- Select with dynamic options https://select2.org/tagging
@@ -57,10 +58,10 @@ block content
                                 .tag S/P Lumpus ESI
                                     svg.tag__close-icon(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")
                                         path(d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z")
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             .label Are you currently taking any medications, including pain medications?
-                            .form__row.form__row_2-col
+                            .form__row.form__row_boolean
                                 .form__group
                                     label.radio.radio--full(for="noM")
                                         input.radio__input(type="radio" name="medications" id="noM" value="no" checked data-hidden="#inputMedication")
@@ -71,7 +72,7 @@ block content
                                         input.radio__input(type="radio" name="medications" id="yesM" value="yes" data-hidden="#inputMedication")
                                         span.radio__label 
                                             span.radio__label-inside Yes
-                    .form__row.form__row_1-col#inputMedication(style="display:none;")
+                    .form__row.form__row_full-width#inputMedication(style="display:none;")
                         .form__group
                             label.label(for="name") If yes, please list the medications you are taking:
                             //- Select with dynamic options https://select2.org/tagging

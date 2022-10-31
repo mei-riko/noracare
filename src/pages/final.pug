@@ -7,26 +7,29 @@ block content
         .content__col
             .sidebar.sidebar_content
                 img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
-                .sidebar__intro
-                    h1.h2 100% filled
-                    p You are filled our question’s list. Please, make a final review!
-                .steps
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 1
-                        .steps__item-name Basic information
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 2
-                        .steps__item-name History of present illness
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 3
-                        .steps__item-name Medical history
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 4
-                        .steps__item-name Past surgical history
-                .sidebar__btns 
-                    a.btn.btn_secondary(href="step-4.html") Back to edit
-                    a.btn.btn_primary(href="#") Finish
-        .content__grid.content__grid_2-col
+                .sidebar__content.sidebar__content_w-steps
+                    .sidebar__intro
+                        h1.h2 100% filled
+                        p You are filled our question’s list. Please, make a final review!
+                    .steps
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 1
+                            .steps__item-name Basic information
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 2
+                            .steps__item-name History of present illness
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 3
+                            .steps__item-name Medical history
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 4
+                            .steps__item-name Past surgical history
+                    .sidebar__btns
+                        .sidebar__btns-item 
+                            a.btn.btn_secondary.btn--full(href="step-4.html") Back to edit
+                        .sidebar__btns-item 
+                            a.btn.btn_primary.btn--full(href="#") Finish
+        .content__grid.content__grid_final
             .content__col
                 .content__block
                     p.h3 John Jameson

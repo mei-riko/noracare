@@ -4,3 +4,26 @@
     background-color: $golden-1;
     color: $text-light;
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .sidebar_welcome-screen{
+        grid-gap: 40px;
+        grid-template-columns: 68px auto;
+
+        &__intro{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .sidebar_welcome-screen{
+        grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: 1fr;
+
+        &__intro{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+    }
+}

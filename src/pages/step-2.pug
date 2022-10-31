@@ -7,27 +7,28 @@ block content
         .content__col
             .sidebar.sidebar_content
                 img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
-                .sidebar__intro
-                    h1.h2 25% filled
-                    p Nice to meet you, John Jameson! You are filled part 1 of our question’s list
-                .steps
-                    .steps__item.steps__item--filled
-                        .steps__item-num.steps__item-num--filled 1
-                        .steps__item-name Basic information
-                    .steps__item.steps__item--active
-                        .steps__item-num.steps__item-num--active 2
-                        .steps__item-name History of present illness
-                    .steps__item
-                        .steps__item-num 3
-                        .steps__item-name Medical history
-                    .steps__item
-                        .steps__item-num 4
-                        .steps__item-name Past surgical history
+                .sidebar__content.sidebar__content_w-steps
+                    .sidebar__intro
+                        h1.h2 25% filled
+                        p Nice to meet you, John Jameson! You are filled part 1 of our question’s list
+                    .steps
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 1
+                            .steps__item-name Basic information
+                        .steps__item.steps__item--active
+                            .steps__item-num.steps__item-num--active 2
+                            .steps__item-name History of present illness
+                        .steps__item
+                            .steps__item-num 3
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 4
+                            .steps__item-name Past surgical history
         .content__col
             .content__block.content__block--full
                 .form 
                     p.h3.form__title History of present illness
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             label.label(for="name") The patient was a:
                             select.select.select--full()
@@ -37,7 +38,7 @@ block content
                                 option(value="4") back-seat passenger
                                 option(value="5") bicyclist
                                 option(value="6") motocyclist
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             label.label(for="name") Was engaged in a:
                             select.select.select--full()
@@ -48,10 +49,10 @@ block content
                                 option(value="5") T-bone collision
                                 option(value="6") side-swipe collision
                                 option(value="7") head-on collision
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             .label Did you go to the Hospital, ER, Urgent Care, or Private Doctor?
-                            .form__row.form__row_2-col
+                            .form__row.form__row_boolean
                                 .form__group
                                     label.radio.radio--full(for="noH")
                                         input.radio__input(type="radio" name="hospital" id="noH" value="no" checked data-hidden="#inputHospital")
@@ -62,13 +63,13 @@ block content
                                         input.radio__input(type="radio" name="hospital" id="yesH" value="yes" data-hidden="#inputHospital")
                                         span.radio__label 
                                             span.radio__label-inside Yes
-                            .form__row.form__row_1-col#inputHospital(style="display:none;")
+                            .form__row.form__row_full-width#inputHospital(style="display:none;")
                                 .form__group 
                                     input.input.input--full(type="text" placeholder="Which hospital or facility?")
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             .label Have you had X-rays or MRIs done prior to today’s visit?
-                            .form__row.form__row_2-col
+                            .form__row.form__row_boolean
                                 .form__group
                                     label.radio.radio--full(for="noX")
                                         input.radio__input(type="radio" name="xray" id="noX" checked)
@@ -79,7 +80,7 @@ block content
                                         input.radio__input(type="radio" name="xray" id="yesX" )
                                         span.radio__label 
                                             span.radio__label-inside Yes
-                    .form__row.form__row_1-col
+                    .form__row.form__row_full-width
                         .form__group
                             label.label(for="name") Are you doing Physical Therapy or Chiropractic Treatment?
                             select.select.select--full()

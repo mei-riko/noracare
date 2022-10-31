@@ -13,14 +13,23 @@
         
         margin-bottom: map-get($map: $spacers, $key: 1);
 
-        &_1-col{
+        &__full-width{
             grid-template-columns: 1fr;
         }
-        &_2-col{
+        &_boolean{
             grid-template-columns: repeat(2, 1fr);
         }
-        &_3-col{
+        &_name-bday{
+            grid-template-columns: repeat(2, 1fr);
+        }
+        &_age-param,
+        &_gender,
+        &_accident{
             grid-template-columns: repeat(3, 1fr);
+        }
+
+        &_checkbox-w-data{
+            grid-template-columns: repeat(2, 1fr);
         }
     }
     &__input-parent{
@@ -69,6 +78,57 @@
 
         &_single{
             grid-template-columns: auto;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .form{
+        &__row{
+            &_checkbox-w-data{
+                grid-template-columns: 1fr;
+                grid-gap: map-get($map: $spacers, $key: 1);
+
+                margin-bottom: map-get($map: $spacers, $key: 2);
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .form{
+        &__row{
+            &_checkbox-w-data{
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: map-get($map: $spacers, $key: 2);
+
+                margin-bottom: map-get($map: $spacers, $key: 1);
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .form{
+        &__row{
+            &_checkbox-w-data{
+                grid-template-columns: 1fr;
+                grid-gap: map-get($map: $spacers, $key: 1);
+
+                margin-bottom: map-get($map: $spacers, $key: 2);
+
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__btns{
+            justify-content: flex-start;
         }
     }
 }

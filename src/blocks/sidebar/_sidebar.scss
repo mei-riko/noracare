@@ -9,6 +9,12 @@
         margin-bottom: 0;
     }
 
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: map-get($map: $spacers, $key: 3);
+    }
+
     &__logo{
         max-width: 100%;
         margin-bottom: map-get($map: $spacers, $key: 5);
@@ -20,18 +26,39 @@
             width: 115px;
         }
     }
-    &__intro{
-        margin-bottom: map-get($map: $spacers, $key: 3);
-
-        &:last-child{
-            margin-bottom: map-get($map: $spacers, $key: 0);
-        }
-    }
     &__btns{
-        margin-top: map-get($map: $spacers, $key: 3);
-
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .sidebar{
+        display: grid;
+
+        &__logo{
+            margin-bottom: map-get($map: $spacers, $key: 3);
+        }
+        &__content{
+            grid-template-columns: 1fr 1fr;
+            grid-gap: map-get($map: $spacers, $key: 2);
+        }
+        &__btns{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .sidebar{
+        &__content{
+            grid-gap: map-get($map: $spacers, $key: 3);
+            grid-template-columns: 1fr;
+        }
+        &__btns{
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
     }
 }

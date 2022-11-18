@@ -80,7 +80,9 @@ table{
     &-center{text-align: center;}
     &-left{text-align: left;}
 }
-
+img{
+    display: inline-block;
+}
 .img-fluid{
     display: block;
     height: auto;

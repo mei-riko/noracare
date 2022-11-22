@@ -53,6 +53,16 @@ $(function() {
             return null;
         }
     });
+    // Select Change
+    $("#inputConditionSelect").on("change", function(){
+        // console.log($('#inputConditionSelect :selected').data("hidden"));
+        if( $('#inputConditionSelect :selected').data("hidden")){
+            $('#inputConditionOther').slideDown();
+        }else{
+            $('#inputConditionOther').slideUp();
+        }
+    });
+
 });
 
 import './mouseup';

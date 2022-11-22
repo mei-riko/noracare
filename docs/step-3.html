@@ -62,7 +62,17 @@
             </div>
             <div class="form__row form__row_full-width" id="inputCondition" style="display:none;">
               <div class="form__group">
-                <input class="input input--full" type="text" data-mask="conditions" placeholder="Write medical condition name here"/>
+                <label class="label" for="name">If yes, tick as appropriate:</label>
+                <select class="select select--full" id="inputConditionSelect">
+                  <option value="" disabled="disabled" selected="selected" data-hidden="false">Choose something...</option>
+                  <option value="1" data-hidden="false">Diabetes</option>
+                  <option value="2" data-hidden="false">High blood pressure</option>
+                  <option value="3" data-hidden="false">High cholestrol</option>
+                  <option value="other" data-hidden="true">Other</option>
+                </select>
+                <div class="form__selected-other" id="inputConditionOther" style="display:none;">
+                  <input class="input input--full" type="text" placeholder="Write medical condition name here"/>
+                </div>
                 <div class="form__selected-tags">
                   <div class="tag">Diabetes
                     <svg class="tag__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

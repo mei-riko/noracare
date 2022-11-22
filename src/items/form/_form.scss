@@ -67,8 +67,11 @@
         flex-wrap: wrap;
         justify-content: flex-start;
 
-        margin-left: -( map-get($map: $spacers, $key: 1) );
-        margin-right: -( map-get($map: $spacers, $key: 1) );
+        margin-left: -( map-get($map: $spacers, $key: 1)/2 );
+        margin-right: -( map-get($map: $spacers, $key: 1)/2 );
+    }
+    &__selected-other{
+        margin-top: map-get($map: $spacers, $key: 1);
     }
     &__btns{
         display: grid;

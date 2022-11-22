@@ -620,7 +620,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   align-items: center;
   font-size: 15px;
   line-height: 20px;
-  margin: 8px 8px 0;
+  margin: 8px 4px 0;
 }
 
 .tag__close-icon {
@@ -951,8 +951,12 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  margin-left: -8px;
-  margin-right: -8px;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.form__selected-other {
+  margin-top: 8px;
 }
 
 .form__btns {

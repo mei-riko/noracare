@@ -44,13 +44,14 @@ block content
                                             span.radio__label-inside Yes
                     .form__row.form__row_full-width#inputCondition(style="display:none;")
                         .form__group
-                            label.label(for="name") If yes, tick as appropriate:
-                            //- Select with dynamic options https://select2.org/tagging
-                            select.select.select--full()
-                                option(value="" disabled selected) Choose something...
-                                option(value="1") Diabetes
-                                option(value="2") High blood pressure
-                                option(value="3") High cholestrol
+                            input.input.input--full(type="text" data-mask="conditions" placeholder="Write medical condition name here")
+                            //- label.label(for="name") If yes, tick as appropriate:
+                            //- //- Select with dynamic options https://select2.org/tagging
+                            //- select.select.select--full()
+                            //-     option(value="" disabled selected) Choose something...
+                            //-     option(value="1") Diabetes
+                            //-     option(value="2") High blood pressure
+                            //-     option(value="3") High cholestrol
                             .form__selected-tags
                                 .tag Diabetes
                                     svg.tag__close-icon(width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg")

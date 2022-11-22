@@ -56,15 +56,22 @@
                 <label class="label" for="date">Date of Birth:</label>
                 <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
               </div>
-            </div>
-            <div class="form__row form__row_age-param">
               <div class="form__group">
                 <label class="label" for="age">Age:</label>
                 <input class="input input--full" type="text" data-mask="number"/>
               </div>
+            </div>
+            <div class="form__row form__row_params">
               <div class="form__group">
                 <label class="label" for="height">Height:</label>
-                <input class="input input--full" type="text" data-mask="height"/>
+                <div class="form__input-group">
+                  <div class="form__input-parent">
+                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">ft</span>
+                  </div>
+                  <div class="form__input-parent">
+                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">in</span>
+                  </div>
+                </div>
               </div>
               <div class="form__group">
                 <label class="label" for="weight">Weight:</label>

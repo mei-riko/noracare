@@ -16,13 +16,11 @@
         &__full-width{
             grid-template-columns: 1fr;
         }
+        &_params,
         &_boolean{
             grid-template-columns: repeat(2, 1fr);
         }
-        &_name-bday{
-            grid-template-columns: repeat(2, 1fr);
-        }
-        &_age-param,
+        &_name-bday,        
         &_gender,
         &_accident{
             grid-template-columns: repeat(3, 1fr);
@@ -31,6 +29,11 @@
         &_checkbox-w-data{
             grid-template-columns: repeat(2, 1fr);
         }
+    }
+    &__input-group{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 1);
+        grid-template-columns: repeat(2, 1fr);
     }
     &__input-parent{
         position: relative;

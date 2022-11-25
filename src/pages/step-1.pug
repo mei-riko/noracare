@@ -31,16 +31,16 @@ block content
             .content__block.content__block--full
                 .form 
                     p.h3.form__title Patient’s Personal Data
-                    .form__row.form__row_name-bday
+                    .form__row.form__row_name-bday-no-age
                         .form__group
                             label.label(for="name") Full Name:
                             input.input.input--full(type="text")
                         .form__group
                             label.label(for="date") Date of Birth:
                             input.input.input--full.input_date(type="date" placeholder="06-10-2022")
-                        .form__group
-                            label.label(for="age") Age:
-                            input.input.input--full(type="text" data-mask="number")
+                        //- .form__group
+                        //-     label.label(for="age") Age:
+                        //-     input.input.input--full(type="text" data-mask="number")
                     .form__row.form__row_params
                         .form__group
                             label.label(for="height") Height:

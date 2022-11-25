@@ -16,6 +16,7 @@
         &__full-width{
             grid-template-columns: 1fr;
         }
+        &_name-bday-no-age,
         &_params,
         &_boolean{
             grid-template-columns: repeat(2, 1fr);

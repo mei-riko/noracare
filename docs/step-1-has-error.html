@@ -47,7 +47,7 @@
         <div class="content__block content__block--full">
           <div class="form"> 
             <p class="h3 form__title">Patient’s Personal Data</p>
-            <div class="form__row form__row_name-bday">
+            <div class="form__row form__row_name-bday-no-age">
               <div class="form__group">
                 <label class="label" for="name">Full Name:</label>
                 <input class="input input--full" type="text"/>
@@ -56,20 +56,21 @@
                 <label class="label" for="date">Date of Birth:</label>
                 <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
               </div>
-              <div class="form__group">
-                <label class="label" for="age">Age:</label>
-                <input class="input input--full" type="text" data-mask="number"/>
-              </div>
             </div>
             <div class="form__row form__row_params">
               <div class="form__group">
                 <label class="label" for="height">Height:</label>
                 <div class="form__input-group">
-                  <div class="form__input-parent">
-                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">ft</span>
+                  <div class="form__group">
+                    <div class="form__input-parent">
+                      <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">ft</span>
+                    </div>
                   </div>
-                  <div class="form__input-parent">
-                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">in</span>
+                  <div class="form__group">
+                    <div class="form__input-parent">
+                      <input class="input input--full input--error" type="text" data-mask="height"/><span class="form__input-size">in</span>
+                    </div>
+                    <div class="form__notification form__notification_error">Required field</div>
                   </div>
                 </div>
               </div>

@@ -893,7 +893,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   grid-template-columns: 1fr;
 }
 
-.form__row_params, .form__row_boolean {
+.form__row_name-bday-no-age, .form__row_params, .form__row_boolean {
   grid-template-columns: repeat(2, 1fr);
 }
 

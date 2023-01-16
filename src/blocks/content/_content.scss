@@ -70,6 +70,17 @@
         margin-bottom: map-get($map: $spacers, $key: 1);
     }
     // Buttons
+    &__step-btns{
+        display: grid;
+        grid-gap: map-get($map: $spacers, $key: 2);
+        grid-template-columns: repeat(2, 1fr);
+
+        margin-top: map-get($map: $spacers, $key: 2);
+        
+        &_single{
+            grid-template-columns: 1fr;
+        }
+    }
     &__final-btns{
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);

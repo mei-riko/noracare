@@ -15,8 +15,8 @@
         <div class="sidebar sidebar_content"><img class="sidebar__logo sidebar__logo_full" src="./img/logo-full.png"/>
           <div class="sidebar__content sidebar__content_w-steps">
             <div class="sidebar__intro">
-              <h1 class="h2">50% filled</h1>
-              <p>Nice to meet you, John Jameson! You are filled part 1 of our question’s list</p>
+              <h1 class="h2">Filled 2 of 6</h1>
+              <p class="sidebar__intro-text">Nice to meet you, John Jameson! You are filled part 1-2 of our question’s list</p>
             </div>
             <div class="steps">
               <div class="steps__item steps__item--filled">
@@ -25,14 +25,22 @@
               </div>
               <div class="steps__item steps__item--filled">
                 <div class="steps__item-num steps__item-num--filled">2</div>
-                <div class="steps__item-name">History of present illness</div>
+                <div class="steps__item-name">Legal Info</div>
               </div>
               <div class="steps__item steps__item--active">
                 <div class="steps__item-num steps__item-num--active">3</div>
-                <div class="steps__item-name">Medical history</div>
+                <div class="steps__item-name">Accident Info</div>
               </div>
               <div class="steps__item">
                 <div class="steps__item-num">4</div>
+                <div class="steps__item-name">History of present illness</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">5</div>
+                <div class="steps__item-name">Medical history</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">6</div>
                 <div class="steps__item-name">Past surgical history</div>
               </div>
             </div>
@@ -42,80 +50,43 @@
       <div class="content__col">
         <div class="content__block content__block--full">
           <div class="form"> 
-            <p class="h3 form__title">Medical history </p>
-            <div class="form__row form__row_full-width">
+            <p class="h3 form__title">Accident Info</p>
+            <div class="form__row form__row_2-col">
               <div class="form__group">
-                <div class="label">Do you have any medical conditions?</div>
-                <div class="form__row form__row_boolean">
+                <label class="label" for="date">Date of Accident:</label>
+                <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="time">Time of Accident:</label>
+                <input class="input input--full input_date" type="time" placeholder=""/>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col">
+              <div class="form__group">
+                <label class="label" for="gender">Type of Accident:</label>
+                <div class="form__row form__row_3-col form__row_inside">
                   <div class="form__group">
-                    <label class="radio radio--full" for="noC">
-                      <input class="radio__input" type="radio" name="conditions" id="noC" value="no" checked="checked" data-hidden="#inputCondition"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                    <label class="radio radio--full" for="nf">
+                      <input class="radio__input" type="radio" name="accident" id="nf" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">NF</span></span>
                     </label>
                   </div>
                   <div class="form__group">
-                    <label class="radio radio--full" for="yesC">
-                      <input class="radio__input" type="radio" name="conditions" id="yesC" value="yes" data-hidden="#inputCondition"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                    <label class="radio radio--full" for="wc">
+                      <input class="radio__input" type="radio" name="accident" id="wc"/><span class="radio__label"> <span class="radio__label-inside">WC</span></span>
+                    </label>
+                  </div>
+                  <div class="form__group">
+                    <label class="radio radio--full" for="lien">
+                      <input class="radio__input" type="radio" name="accident" id="lien"/><span class="radio__label"> <span class="radio__label-inside">LIEN</span></span>
                     </label>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="form__row form__row_full-width" id="inputCondition" style="display:none;">
+            <div class="form__row form__row_1-col">
               <div class="form__group">
-                <label class="label" for="name">If yes, tick as appropriate:</label>
-                <select class="select select--full" id="inputConditionSelect">
-                  <option value="" disabled="disabled" selected="selected" data-hidden="false">Choose something...</option>
-                  <option value="1" data-hidden="false">Diabetes</option>
-                  <option value="2" data-hidden="false">High blood pressure</option>
-                  <option value="3" data-hidden="false">High cholestrol</option>
-                  <option value="other" data-hidden="true">Other</option>
-                </select>
-                <div class="form__selected-other" id="inputConditionOther" style="display:none;">
-                  <input class="input input--full" type="text" placeholder="Write medical condition name here"/>
-                </div>
-                <div class="form__selected-tags">
-                  <div class="tag">Diabetes
-                    <svg class="tag__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z"></path>
-                    </svg>
-                  </div>
-                  <div class="tag">S/P Lumpus ESI
-                    <svg class="tag__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.9735 8.00001L12.6668 11.6933V12.6667H11.6935L8.00016 8.97334L4.30683 12.6667H3.3335V11.6933L7.02683 8.00001L3.3335 4.30668V3.33334H4.30683L8.00016 7.02668L11.6935 3.33334H12.6668V4.30668L8.9735 8.00001Z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form__row form__row_full-width">
-              <div class="form__group">
-                <div class="label">Are you currently taking any medications, including pain medications?</div>
-                <div class="form__row form__row_boolean">
-                  <div class="form__group">
-                    <label class="radio radio--full" for="noM">
-                      <input class="radio__input" type="radio" name="medications" id="noM" value="no" checked="checked" data-hidden="#inputMedication"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <label class="radio radio--full" for="yesM">
-                      <input class="radio__input" type="radio" name="medications" id="yesM" value="yes" data-hidden="#inputMedication"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form__row form__row_full-width" id="inputMedication" style="display:none;">
-              <div class="form__group">
-                <label class="label" for="name">If yes, please list the medications you are taking:</label>
-                <select class="select select--full">
-                  <option value="" disabled="disabled" selected="selected">Choose something...</option>
-                  <option value="1">medication 1</option>
-                  <option value="2">medication 2</option>
-                  <option value="3">medication 3</option>
-                  <option value="4">medication 4</option>
-                  <option value="5">medication 5</option>
-                  <option value="6">medication 6</option>
-                </select>
+                <label class="label" for="address_accident">Place of accident:</label>
+                <textarea class="textarea textarea--full" rows="2"></textarea>
               </div>
             </div>
             <div class="form__btns"> <a class="btn btn_secondary" href="step-2.html">Previous step</a><a class="btn btn_primary" href="step-4.html">Next step</a></div>

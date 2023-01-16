@@ -14,7 +14,7 @@
         margin-top: map-get($map: $spacers, $key: 2);
 
         &--active{
-            color: $text-dark;
+            color: $golden-2;
         }
         &--filled{
             color: $text-dark;
@@ -39,7 +39,7 @@
         line-height: map-get($line-height, 'xs');
 
         &--active{
-            border-color: $text-dark;
+            border-color: $golden-2;
         }
         &--filled{
             color: rgba(45,51,61,0);

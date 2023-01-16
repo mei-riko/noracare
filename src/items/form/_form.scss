@@ -13,23 +13,35 @@
         
         margin-bottom: map-get($map: $spacers, $key: 1);
 
-        &__full-width{
+        &_1-col{
             grid-template-columns: 1fr;
         }
-        &_name-bday-no-age,
-        &_params,
-        &_boolean{
+        &_2-col{
             grid-template-columns: repeat(2, 1fr);
         }
-        &_name-bday,        
-        &_gender,
-        &_accident{
+        &_3-col{
             grid-template-columns: repeat(3, 1fr);
         }
-
+        
         &_checkbox-w-data{
             grid-template-columns: repeat(2, 1fr);
         }
+
+        &_inside{
+            margin-bottom: 0px;
+        }
+        // &_name-bday-no-age,
+        // &_params,
+        // &_boolean{
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
+        // &_name-bday,        
+        // &_gender,
+        // &_accident{
+        //     grid-template-columns: repeat(3, 1fr);
+        // }
+
+        
     }
     &__input-group{
         display: grid;

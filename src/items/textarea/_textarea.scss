@@ -1,0 +1,36 @@
+.textarea{
+    padding: 13px 16px;
+
+    border-radius: 12px;
+    border: 1px solid $input;
+
+    background-color: $input;
+    color: $text-dark;
+    outline: none;
+
+    font-size: map-get($map: $font-size, $key: sm);
+    line-height: 20px;
+    // max-height: 48px;
+
+    transition: $transition-base;
+
+    &::placeholder{
+        color: $text-secondary-1;
+    }
+
+    &:focus{
+        border-color: $text-secondary-2;
+    }
+
+    &--full{
+        width: 100%;
+    }
+    &--error{
+        border-color: $red;
+    }
+
+    &[disabled=true], &:disabled{
+        filter: opacity(.5);
+        cursor: not-allowed;
+    }
+}

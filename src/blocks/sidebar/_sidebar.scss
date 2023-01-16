@@ -8,7 +8,9 @@
     &:last-child{
         margin-bottom: 0;
     }
-
+    &__intro-text{
+        color: $text-secondary-1;
+    }
     &__content{
         display: grid;
         grid-template-columns: 1fr;

@@ -15,8 +15,8 @@
         <div class="sidebar sidebar_content"><img class="sidebar__logo sidebar__logo_full" src="./img/logo-full.png"/>
           <div class="sidebar__content sidebar__content_w-steps">
             <div class="sidebar__intro">
-              <h1 class="h2">75% filled</h1>
-              <p>Nice to meet you, John Jameson! You are filled part 1-3  of our question’s list</p>
+              <h1 class="h2">Filled 3 of 6</h1>
+              <p class="sidebar__intro-text">Nice to meet you, John Jameson! You are filled part 1-3 of our question’s list</p>
             </div>
             <div class="steps">
               <div class="steps__item steps__item--filled">
@@ -25,14 +25,22 @@
               </div>
               <div class="steps__item steps__item--filled">
                 <div class="steps__item-num steps__item-num--filled">2</div>
-                <div class="steps__item-name">History of present illness</div>
+                <div class="steps__item-name">Legal Info</div>
               </div>
               <div class="steps__item steps__item--filled">
                 <div class="steps__item-num steps__item-num--filled">3</div>
-                <div class="steps__item-name">Medical history</div>
+                <div class="steps__item-name">Accident Info</div>
               </div>
               <div class="steps__item steps__item--active">
                 <div class="steps__item-num steps__item-num--active">4</div>
+                <div class="steps__item-name">History of present illness</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">5</div>
+                <div class="steps__item-name">Medical history</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">6</div>
                 <div class="steps__item-name">Past surgical history</div>
               </div>
             </div>
@@ -42,86 +50,82 @@
       <div class="content__col">
         <div class="content__block content__block--full">
           <div class="form"> 
-            <p class="h3 form__title">Past surgical history </p>
+            <p class="h3 form__title">History of present illness</p>
             <div class="form__row form__row_full-width">
               <div class="form__group">
-                <div class="label">Have you had any prior surgeries?</div>
-                <div class="form__row form__row_checkbox-w-data">
+                <label class="label" for="name">The patient was a:</label>
+                <select class="select select--full">
+                  <option value="1">restrained driver</option>
+                  <option value="2">unrestrained driver</option>
+                  <option value="3">front-seat passenger</option>
+                  <option value="4">back-seat passenger</option>
+                  <option value="5">bicyclist</option>
+                  <option value="6">motocyclist</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row form__row_full-width">
+              <div class="form__group">
+                <label class="label" for="name">Was engaged in a:</label>
+                <select class="select select--full">
+                  <option value="1">driver’s side impact</option>
+                  <option value="2">front-end impact</option>
+                  <option value="3">rear-end impact</option>
+                  <option value="4">passenger's side impact</option>
+                  <option value="5">T-bone collision</option>
+                  <option value="6">side-swipe collision</option>
+                  <option value="7">head-on collision</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__row form__row_full-width">
+              <div class="form__group">
+                <div class="label">Did you go to the Hospital, ER, Urgent Care, or Private Doctor?</div>
+                <div class="form__row form__row_2-col">
                   <div class="form__group">
-                    <label class="radio radio--full" for="noS">
-                      <input class="radio__input" type="radio" name="surgeries" id="noS" value="no" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                    <label class="radio radio--full" for="noH">
+                      <input class="radio__input" type="radio" name="hospital" id="noH" value="no" checked="checked" data-hidden="#inputHospital"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
                     </label>
                   </div>
                   <div class="form__group">
-                    <label class="radio radio--full" for="yesS">
-                      <input class="radio__input" type="radio" name="surgeries" id="yesS" value="yes"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                    <label class="radio radio--full" for="yesH">
+                      <input class="radio__input" type="radio" name="hospital" id="yesH" value="yes" data-hidden="#inputHospital"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
                     </label>
                   </div>
+                </div>
+                <div class="form__row form__row_1-col" id="inputHospital" style="display:none;">
+                  <div class="form__group"> 
+                    <input class="input input--full" type="text" placeholder="Which hospital or facility?"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col">
+              <div class="label">Have you had X-rays or MRIs done prior to today’s visit?</div>
+              <div class="form__row form__row_2-col">
+                <div class="form__group">
+                  <label class="radio radio--full" for="noX">
+                    <input class="radio__input" type="radio" name="xray" id="noX" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">No</span></span>
+                  </label>
+                </div>
+                <div class="form__group">
+                  <label class="radio radio--full" for="yesX">
+                    <input class="radio__input" type="radio" name="xray" id="yesX"/><span class="radio__label"> <span class="radio__label-inside">Yes</span></span>
+                  </label>
                 </div>
               </div>
             </div>
             <div class="form__row form__row_full-width">
               <div class="form__group">
-                <div class="label">If yes, please list any prior surgeries you have had:</div>
-                <div class="form__row form__row_checkbox-w-data">
-                  <div class="form__group">
-                    <label class="checkbox checkbox--full" for="surgeriesList1">
-                      <input class="checkbox__input" type="checkbox" name="surgeriesList" data-activate="#inputDate1" id="surgeriesList1" value=""/><span class="checkbox__label"> <span class="checkbox__label-inside">Right shoulder arthroscopy</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <input class="input input--full input_date" id="inputDate1" type="date" placeholder="06-10-2022" disabled="true"/>
-                  </div>
-                </div>
-                <div class="form__row form__row_checkbox-w-data">
-                  <div class="form__group">
-                    <label class="checkbox checkbox--full" for="surgeriesList2">
-                      <input class="checkbox__input" type="checkbox" name="surgeriesList" data-activate="#inputDate2" id="surgeriesList2" value=""/><span class="checkbox__label"> <span class="checkbox__label-inside">Left shoulder arthroscopy</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <input class="input input--full input_date" id="inputDate2" type="date" placeholder="06-10-2022" disabled="true"/>
-                  </div>
-                </div>
-                <div class="form__row form__row_checkbox-w-data">
-                  <div class="form__group">
-                    <label class="checkbox checkbox--full" for="surgeriesList3">
-                      <input class="checkbox__input" type="checkbox" name="surgeriesList" data-activate="#inputDate3" id="surgeriesList3" value=""/><span class="checkbox__label"> <span class="checkbox__label-inside">Right knee arthroscopy</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <input class="input input--full input_date" id="inputDate3" type="date" placeholder="06-10-2022" disabled="true"/>
-                  </div>
-                </div>
-                <div class="form__row form__row_checkbox-w-data">
-                  <div class="form__group">
-                    <label class="checkbox checkbox--full" for="surgeriesList4">
-                      <input class="checkbox__input" type="checkbox" name="surgeriesList" data-activate="#inputDate4" id="surgeriesList4" value=""/><span class="checkbox__label"> <span class="checkbox__label-inside">Left knee arthroscopy</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <input class="input input--full input_date" id="inputDate4" type="date" placeholder="06-10-2022" disabled="true"/>
-                  </div>
-                </div>
-                <div class="form__row form__row_checkbox-w-data">
-                  <div class="form__group">
-                    <label class="checkbox checkbox--full" for="surgeriesList5">
-                      <input class="checkbox__input" type="checkbox" name="surgeriesList" data-activate="#inputDate5" id="surgeriesList5" value=""/><span class="checkbox__label"> <span class="checkbox__label-inside">Cervical surgery</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <input class="input input--full input_date" id="inputDate5" type="date" placeholder="06-10-2022" disabled="true"/>
-                  </div>
-                </div>
+                <label class="label" for="name">Are you doing Physical Therapy or Chiropractic Treatment?</label>
+                <select class="select select--full">
+                  <option value="1">Physical Therapy</option>
+                  <option value="2">Chiropractic Treatment</option>
+                  <option value="3">Both</option>
+                </select>
               </div>
             </div>
-            <div class="form__row form__row_full-width">
-              <div class="form__group">
-                <div class="label">Other surgeries not listed:</div>
-                <input class="input input--full" type="text" placeholder="Write here"/>
-              </div>
-            </div>
-            <div class="form__btns"> <a class="btn btn_secondary" href="step-3.html">Previous step</a><a class="btn btn_primary" href="final.html">Next step</a></div>
+            <div class="form__btns"> <a class="btn btn_secondary" href="step-3.html">Previous step</a><a class="btn btn_primary" href="step-5.html">Next step</a></div>
           </div>
         </div>
       </div>

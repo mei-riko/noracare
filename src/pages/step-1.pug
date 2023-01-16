@@ -14,15 +14,21 @@ block content
                     .steps
                         .steps__item.steps__item--active
                             .steps__item-num.steps__item-num--active 1
-                            .steps__item-name Basic information
+                            .steps__item-name Basic Info
                         .steps__item
                             .steps__item-num 2
-                            .steps__item-name History of present illness
+                            .steps__item-name Legal Info
                         .steps__item
                             .steps__item-num 3
-                            .steps__item-name Medical history
+                            .steps__item-name Accident Info
                         .steps__item
                             .steps__item-num 4
+                            .steps__item-name History of present illness
+                        .steps__item
+                            .steps__item-num 5
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 6
                             .steps__item-name Past surgical history
             .sidebar
                 p Today’s date
@@ -30,36 +36,29 @@ block content
         .content__col
             .content__block.content__block--full
                 .form 
-                    p.h3.form__title Patient’s Personal Data
-                    .form__row.form__row_name-bday-no-age
+                    p.h3.form__title Patient's personal data
+                    .form__row.form__row_2-col
                         .form__group
                             label.label(for="name") Full Name:
                             input.input.input--full(type="text")
                         .form__group
                             label.label(for="date") Date of Birth:
                             input.input.input--full.input_date(type="date" placeholder="06-10-2022")
-                        //- .form__group
-                        //-     label.label(for="age") Age:
-                        //-     input.input.input--full(type="text" data-mask="number")
-                    .form__row.form__row_params
+                    .form__row.form__row_1-col
                         .form__group
-                            label.label(for="height") Height:
-                            .form__input-group
-                                .form__input-parent
-                                    input.input.input--full(type="text" data-mask="height")
-                                    span.form__input-size ft
-                                .form__input-parent
-                                    input.input.input--full(type="text" data-mask="height")
-                                    span.form__input-size in
+                            label.label(for="ssn") Social Security Number:
+                            input.input.input--full(type="text")
+                    .form__row.form__row_2-col
                         .form__group
-                            label.label(for="weight") Weight:
-                            .form__input-parent
-                                input.input.input--full.form__input-child(type="text" data-mask="number")
-                                span.form__input-size lbs
-                    .form__row.form__row_full-width
+                            label.label(for="home_phone") Home Phone:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="cell_phone") Cell Phone:
+                            input.input.input--full(type="text")
+                    .form__row.form__row_1-col
                         .form__group
                             .label Gender:
-                            .form__row.form__row_gender
+                            .form__row.form__row_3-col
                                 .form__group
                                     label.radio.radio--full(for="male")
                                         input.radio__input(type="radio" name="gender" id="male" checked)
@@ -75,30 +74,49 @@ block content
                                         input.radio__input(type="radio" name="gender" id="other")
                                         span.radio__label 
                                             span.radio__label-inside Other
-                    p.h3.form__title Accident Info
-                    .form__row.form__row_full-width
+                    .form__row.form__row_2-col
                         .form__group
-                            label.label(for="date") Date of Accident:
-                            input.input.input--full.input_date(type="date" placeholder="06-10-2022")
-                    .form__row.form__row_full-width
+                            label.label(for="height") Height:
+                            .form__input-group
+                                .form__group
+                                    .form__input-parent
+                                        input.input.input--full(type="text" data-mask="height")
+                                        span.form__input-size ft
+                                .form__group
+                                    .form__input-parent
+                                        input.input.input--full(type="text" data-mask="height")
+                                        span.form__input-size in
                         .form__group
-                            label.label(for="gender") Type of Accident:
-                            .form__row.form__row_accident
-                                .form__group
-                                    label.radio.radio--full(for="nf")
-                                        input.radio__input(type="radio" name="accident" id="nf" checked)
-                                        span.radio__label 
-                                            span.radio__label-inside NF
-                                .form__group
-                                    label.radio.radio--full(for="wc")
-                                        input.radio__input(type="radio" name="accident" id="wc" )
-                                        span.radio__label 
-                                            span.radio__label-inside WC
-                                .form__group
-                                    label.radio.radio--full(for="lien")
-                                        input.radio__input(type="radio" name="accident" id="lien")
-                                        span.radio__label 
-                                            span.radio__label-inside LIEN
+                            label.label(for="weight") Weight:
+                            .form__input-parent
+                                input.input.input--full.form__input-child(type="text" data-mask="number")
+                                span.form__input-size lbs
+                    p.h3.form__title Patient's address
+                    .form__row.form__row_2-col
+                        .form__group
+                            label.label(for="street") Street:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="unit") Apartment or unit:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="city") City:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="zip") State, State Zip code:
+                            input.input.input--full(type="text")
+                    p.h3.form__title Emergency contact
+                    .form__row.form__row_1-col
+                        .form__group
+                            label.label(for="name_contact") Full Name:
+                            input.input.input--full(type="text")
+                    .form__row.form__row_2-col
+                        .form__group
+                            label.label(for="relationship") Relationship:
+                            input.input.input--full(type="text")
+                        .form__group
+                            label.label(for="cell_phone_contact") Cell phone:
+                            input.input.input--full(type="text")
                     .form__btns.form__btns_single
                         a.btn.btn_primary(href="step-1-has-error.html") Next step
 

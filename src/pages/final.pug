@@ -9,50 +9,122 @@ block content
                 img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
                 .sidebar__content.sidebar__content_w-steps
                     .sidebar__intro
-                        h1.h2 100% filled
-                        p You are filled our question’s list. Please, make a final review!
+                        h1.h2 Filled 6 of 6
+                        p.sidebar__intro-text You are filled our question’s list. Please, make a final review!
                     .steps
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 1
                             .steps__item-name Basic information
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 2
-                            .steps__item-name History of present illness
+                            .steps__item-name Legal Info
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 3
-                            .steps__item-name Medical history
+                            .steps__item-name Accident Info
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 4
+                            .steps__item-name History of present illness
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 5
+                            .steps__item-name Medical history
+                        .steps__item.steps__item--filled
+                            .steps__item-num.steps__item-num--filled 6
                             .steps__item-name Past surgical history
-                    .sidebar__btns
-                        .sidebar__btns-item 
-                            a.btn.btn_secondary.btn--full(href="step-4.html") Back to edit
-                        .sidebar__btns-item 
-                            a.btn.btn_primary.btn--full(href="#") Finish
-        .content__grid.content__grid_final
-            .content__col
+        .content__col
+            .content__grid.content__grid_filled-info-container
                 .content__block
                     p.h3 John Jameson
-                    .content__grid.content__grid_2-col
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle SSN
+                            p 123-45-6789
                         .content__data 
                             p.content__subtitle Date of Birth
                             p 23-02-1989
                         .content__data 
                             p.content__subtitle Age
                             p 33 years
+                        .content__data
+                            p.content__subtitle Gender
+                            p Male
                         .content__data 
                             p.content__subtitle Height
                             p 5'7
                         .content__data 
                             p.content__subtitle Weight
                             p 158lbs
-                        .content__data
-                            p.content__subtitle Gender
-                            p Male
-                .content__block.content__block--full
+                .content__block
+                    p.h3 Contact info
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Home phone
+                            p (555) 555-1234
+                        .content__data 
+                            p.content__subtitle Cell phone
+                            p (555) 555-1234
+                        .content__data 
+                            p.content__subtitle Address
+                            p 495 Grove St., Apart. #20, 
+                                <br/> New York, NY 10014
+                .content__block
+                    p.h3 Emergency contact
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Full Name
+                            p Jane Clark
+                        .content__data 
+                            p.content__subtitle Relationship
+                            p wife
+                        .content__data 
+                            p.content__subtitle Cell Phone:
+                            p (555) 555-1234
+                .content__block
+                    p.h3 “Sauls Insurance Agency” (insurance company)
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Policy Holder
+                            p John Jameson
+                        .content__data 
+                            p.content__subtitle Policy#
+                            p 123-4567-8910
+                        .content__data 
+                            p.content__subtitle Claim#
+                            p 223-00
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Adjuster name
+                            p Carl Clarsson
+                        .content__data 
+                            p.content__subtitle Adjuster phone
+                            p (555) 555-1234
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Attorney name
+                            p Mary Fox
+                        .content__data 
+                            p.content__subtitle Attorney phone
+                            p (555) 555-1234
+                                <br/> (555) 555-1200 (fax)
+                        .content__data 
+                            p.content__subtitle Attorney address
+                            p 495 Grove St., Apart. #20, 
+                                <br/> New York, NY 10014
+                .content__block 
+                    p.h3 Accident Info
+                    .content__grid.content__grid_filled-info-col
+                        .content__data 
+                            p.content__subtitle Date of Accident
+                            p 06-10-2022
+                        .content__data 
+                            p.content__subtitle Time of Accident
+                            p 2 PM
+                        .content__data 
+                            p.content__subtitle Accident Type
+                            p NF
+                .content__block
                     p.h3 History of present illness
-                    p The patient was a restrained driver that was engaged in a driver’s side impact
-                    .content__grid.content__grid_1-col
+                    p.text-bold The patient was a restrained driver that was engaged in a driver’s side impact
+                    .content__grid.content__grid_filled-info-col
                         .content__data 
                             p.content__subtitle Did you go to the Hospital, ER, Urgent Care, or Private Doctor?
                             p Yes, Republican Hospital
@@ -62,19 +134,9 @@ block content
                         .content__data 
                             p.content__subtitle Have you had X-rays or MRIs done prior to today’s visit?
                             p Yes
-            .content__col
                 .content__block
-                    p.h3 Accident
-                    .content__grid.content__grid_1-col
-                        .content__data 
-                            p.content__subtitle Accident Type
-                            p NF
-                        .content__data 
-                            p.content__subtitle Date of Accident
-                            p 06-10-2022
-                .content__block.content__block--full
-                    p.h3 Medical history
-                    .content__grid.content__grid_1-col
+                    p.h3 Medical and Past Surgical History
+                    .content__grid.content__grid_filled-info-col
                         .content__data 
                             p.content__subtitle Medical conditions 
                             ul 
@@ -89,4 +151,14 @@ block content
                             p.content__subtitle Prior surgeries 
                             ul 
                                 li Left shoulder arthroscopy dated 11-07-2021
+                .content__block
+                    p.h3 Patient's signature
+                    .content__grid.content__grid_1-col
+                        .content__data 
+                            p.content__subtitle If all correct, please add your signature here:
+                            .form 
+                                textarea.textarea.textarea--full(rows="6")
+                .content__final-btns 
+                    a.btn.btn_secondary(href="step-1.html") Back to edit
+                    a.btn.btn_primary(href="text.html") Send form
 block footer

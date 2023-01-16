@@ -21,18 +21,26 @@
             <div class="steps">
               <div class="steps__item steps__item--active">
                 <div class="steps__item-num steps__item-num--active">1</div>
-                <div class="steps__item-name">Basic information</div>
+                <div class="steps__item-name">Basic Info</div>
               </div>
               <div class="steps__item">
                 <div class="steps__item-num">2</div>
-                <div class="steps__item-name">History of present illness</div>
+                <div class="steps__item-name">Legal Info</div>
               </div>
               <div class="steps__item">
                 <div class="steps__item-num">3</div>
-                <div class="steps__item-name">Medical history</div>
+                <div class="steps__item-name">Accident Info</div>
               </div>
               <div class="steps__item">
                 <div class="steps__item-num">4</div>
+                <div class="steps__item-name">History of present illness</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">5</div>
+                <div class="steps__item-name">Medical history</div>
+              </div>
+              <div class="steps__item">
+                <div class="steps__item-num">6</div>
                 <div class="steps__item-name">Past surgical history</div>
               </div>
             </div>
@@ -46,8 +54,8 @@
       <div class="content__col">
         <div class="content__block content__block--full">
           <div class="form"> 
-            <p class="h3 form__title">Patient’s Personal Data</p>
-            <div class="form__row form__row_name-bday-no-age">
+            <p class="h3 form__title">Patient's personal data</p>
+            <div class="form__row form__row_2-col">
               <div class="form__group">
                 <label class="label" for="name">Full Name:</label>
                 <input class="input input--full" type="text"/>
@@ -57,29 +65,26 @@
                 <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
               </div>
             </div>
-            <div class="form__row form__row_params">
+            <div class="form__row form__row_1-col">
               <div class="form__group">
-                <label class="label" for="height">Height:</label>
-                <div class="form__input-group">
-                  <div class="form__input-parent">
-                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">ft</span>
-                  </div>
-                  <div class="form__input-parent">
-                    <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">in</span>
-                  </div>
-                </div>
-              </div>
-              <div class="form__group">
-                <label class="label" for="weight">Weight:</label>
-                <div class="form__input-parent">
-                  <input class="input input--full form__input-child" type="text" data-mask="number"/><span class="form__input-size">lbs</span>
-                </div>
+                <label class="label" for="ssn">Social Security Number:</label>
+                <input class="input input--full" type="text"/>
               </div>
             </div>
-            <div class="form__row form__row_full-width">
+            <div class="form__row form__row_2-col">
+              <div class="form__group">
+                <label class="label" for="home_phone">Home Phone:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="cell_phone">Cell Phone:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+            </div>
+            <div class="form__row form__row_1-col">
               <div class="form__group">
                 <div class="label">Gender:</div>
-                <div class="form__row form__row_gender">
+                <div class="form__row form__row_3-col">
                   <div class="form__group">
                     <label class="radio radio--full" for="male">
                       <input class="radio__input" type="radio" name="gender" id="male" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">Male</span></span>
@@ -98,33 +103,63 @@
                 </div>
               </div>
             </div>
-            <p class="h3 form__title">Accident Info</p>
-            <div class="form__row form__row_full-width">
+            <div class="form__row form__row_2-col">
               <div class="form__group">
-                <label class="label" for="date">Date of Accident:</label>
-                <input class="input input--full input_date" type="date" placeholder="06-10-2022"/>
-              </div>
-            </div>
-            <div class="form__row form__row_full-width">
-              <div class="form__group">
-                <label class="label" for="gender">Type of Accident:</label>
-                <div class="form__row form__row_accident">
+                <label class="label" for="height">Height:</label>
+                <div class="form__input-group">
                   <div class="form__group">
-                    <label class="radio radio--full" for="nf">
-                      <input class="radio__input" type="radio" name="accident" id="nf" checked="checked"/><span class="radio__label"> <span class="radio__label-inside">NF</span></span>
-                    </label>
+                    <div class="form__input-parent">
+                      <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">ft</span>
+                    </div>
                   </div>
                   <div class="form__group">
-                    <label class="radio radio--full" for="wc">
-                      <input class="radio__input" type="radio" name="accident" id="wc"/><span class="radio__label"> <span class="radio__label-inside">WC</span></span>
-                    </label>
-                  </div>
-                  <div class="form__group">
-                    <label class="radio radio--full" for="lien">
-                      <input class="radio__input" type="radio" name="accident" id="lien"/><span class="radio__label"> <span class="radio__label-inside">LIEN</span></span>
-                    </label>
+                    <div class="form__input-parent">
+                      <input class="input input--full" type="text" data-mask="height"/><span class="form__input-size">in</span>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div class="form__group">
+                <label class="label" for="weight">Weight:</label>
+                <div class="form__input-parent">
+                  <input class="input input--full form__input-child" type="text" data-mask="number"/><span class="form__input-size">lbs</span>
+                </div>
+              </div>
+            </div>
+            <p class="h3 form__title">Patient's address</p>
+            <div class="form__row form__row_2-col">
+              <div class="form__group">
+                <label class="label" for="street">Street:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="unit">Apartment or unit:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="city">City:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="zip">State, State Zip code:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+            </div>
+            <p class="h3 form__title">Emergency contact</p>
+            <div class="form__row form__row_1-col">
+              <div class="form__group">
+                <label class="label" for="name_contact">Full Name:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+            </div>
+            <div class="form__row form__row_2-col">
+              <div class="form__group">
+                <label class="label" for="relationship">Relationship:</label>
+                <input class="input input--full" type="text"/>
+              </div>
+              <div class="form__group">
+                <label class="label" for="cell_phone_contact">Cell phone:</label>
+                <input class="input input--full" type="text"/>
               </div>
             </div>
             <div class="form__btns form__btns_single"><a class="btn btn_primary" href="step-1-has-error.html">Next step</a></div>

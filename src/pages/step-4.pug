@@ -9,87 +9,90 @@ block content
                 img.sidebar__logo.sidebar__logo_full(src="./img/logo-full.png")
                 .sidebar__content.sidebar__content_w-steps
                     .sidebar__intro
-                        h1.h2 75% filled
-                        p Nice to meet you, John Jameson! You are filled part 1-3  of our question’s list
+                        h1.h2 Filled 3 of 6
+                        p.sidebar__intro-text Nice to meet you, John Jameson! You are filled part 1-3 of our question’s list
                     .steps
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 1
                             .steps__item-name Basic information
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 2
-                            .steps__item-name History of present illness
+                            .steps__item-name Legal Info
                         .steps__item.steps__item--filled
                             .steps__item-num.steps__item-num--filled 3
-                            .steps__item-name Medical history
+                            .steps__item-name Accident Info
                         .steps__item.steps__item--active
                             .steps__item-num.steps__item-num--active 4
+                            .steps__item-name History of present illness
+                        .steps__item
+                            .steps__item-num 5
+                            .steps__item-name Medical history
+                        .steps__item
+                            .steps__item-num 6
                             .steps__item-name Past surgical history
         .content__col
             .content__block.content__block--full
                 .form 
-                    p.h3.form__title Past surgical history 
+                    p.h3.form__title History of present illness
                     .form__row.form__row_full-width
                         .form__group
-                            .label Have you had any prior surgeries?
-                            .form__row.form__row_checkbox-w-data
+                            label.label(for="name") The patient was a:
+                            select.select.select--full()
+                                option(value="1") restrained driver
+                                option(value="2") unrestrained driver
+                                option(value="3") front-seat passenger
+                                option(value="4") back-seat passenger
+                                option(value="5") bicyclist
+                                option(value="6") motocyclist
+                    .form__row.form__row_full-width
+                        .form__group
+                            label.label(for="name") Was engaged in a:
+                            select.select.select--full()
+                                option(value="1") driver’s side impact
+                                option(value="2") front-end impact
+                                option(value="3") rear-end impact
+                                option(value="4") passenger's side impact
+                                option(value="5") T-bone collision
+                                option(value="6") side-swipe collision
+                                option(value="7") head-on collision
+                    .form__row.form__row_full-width
+                        .form__group
+                            .label Did you go to the Hospital, ER, Urgent Care, or Private Doctor?
+                            .form__row.form__row_2-col
                                 .form__group
-                                    label.radio.radio--full(for="noS")
-                                        input.radio__input(type="radio" name="surgeries" id="noS" value="no" checked)
+                                    label.radio.radio--full(for="noH")
+                                        input.radio__input(type="radio" name="hospital" id="noH" value="no" checked data-hidden="#inputHospital")
                                         span.radio__label 
                                             span.radio__label-inside No
                                 .form__group
-                                    label.radio.radio--full(for="yesS")
-                                        input.radio__input(type="radio" name="surgeries" id="yesS" value="yes")
+                                    label.radio.radio--full(for="yesH")
+                                        input.radio__input(type="radio" name="hospital" id="yesH" value="yes" data-hidden="#inputHospital")
+                                        span.radio__label 
+                                            span.radio__label-inside Yes
+                            .form__row.form__row_1-col#inputHospital(style="display:none;")
+                                .form__group 
+                                    input.input.input--full(type="text" placeholder="Which hospital or facility?")
+                    .form__row.form__row_1-col
+                            .label Have you had X-rays or MRIs done prior to today’s visit?
+                            .form__row.form__row_2-col
+                                .form__group
+                                    label.radio.radio--full(for="noX")
+                                        input.radio__input(type="radio" name="xray" id="noX" checked)
+                                        span.radio__label 
+                                            span.radio__label-inside No
+                                .form__group
+                                    label.radio.radio--full(for="yesX")
+                                        input.radio__input(type="radio" name="xray" id="yesX" )
                                         span.radio__label 
                                             span.radio__label-inside Yes
                     .form__row.form__row_full-width
                         .form__group
-                            .label If yes, please list any prior surgeries you have had:
-                            .form__row.form__row_checkbox-w-data
-                                .form__group
-                                    label.checkbox.checkbox--full(for="surgeriesList1")
-                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate1" id="surgeriesList1" value="")
-                                        span.checkbox__label 
-                                            span.checkbox__label-inside Right shoulder arthroscopy
-                                .form__group
-                                    input.input.input--full.input_date#inputDate1(type="date" placeholder="06-10-2022" disabled="true")
-                            .form__row.form__row_checkbox-w-data
-                                .form__group
-                                    label.checkbox.checkbox--full(for="surgeriesList2")
-                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate2" id="surgeriesList2" value="")
-                                        span.checkbox__label 
-                                            span.checkbox__label-inside Left shoulder arthroscopy
-                                .form__group
-                                    input.input.input--full.input_date#inputDate2(type="date" placeholder="06-10-2022" disabled="true")
-                            .form__row.form__row_checkbox-w-data
-                                .form__group
-                                    label.checkbox.checkbox--full(for="surgeriesList3")
-                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate3" id="surgeriesList3" value="")
-                                        span.checkbox__label 
-                                            span.checkbox__label-inside Right knee arthroscopy
-                                .form__group
-                                    input.input.input--full.input_date#inputDate3(type="date" placeholder="06-10-2022" disabled="true")
-                            .form__row.form__row_checkbox-w-data
-                                .form__group
-                                    label.checkbox.checkbox--full(for="surgeriesList4")
-                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate4" id="surgeriesList4" value="")
-                                        span.checkbox__label 
-                                            span.checkbox__label-inside Left knee arthroscopy
-                                .form__group
-                                    input.input.input--full.input_date#inputDate4(type="date" placeholder="06-10-2022" disabled="true")
-                            .form__row.form__row_checkbox-w-data
-                                .form__group
-                                    label.checkbox.checkbox--full(for="surgeriesList5")
-                                        input.checkbox__input(type="checkbox" name="surgeriesList" data-activate="#inputDate5" id="surgeriesList5" value="")
-                                        span.checkbox__label 
-                                            span.checkbox__label-inside Cervical surgery
-                                .form__group
-                                    input.input.input--full.input_date#inputDate5(type="date" placeholder="06-10-2022" disabled="true")
-                    .form__row.form__row_full-width
-                        .form__group
-                            .label Other surgeries not listed:
-                            input.input.input--full(type="text" placeholder="Write here")
+                            label.label(for="name") Are you doing Physical Therapy or Chiropractic Treatment?
+                            select.select.select--full()
+                                option(value="1") Physical Therapy
+                                option(value="2") Chiropractic Treatment
+                                option(value="3") Both
                     .form__btns 
                         a.btn.btn_secondary(href="step-3.html") Previous step
-                        a.btn.btn_primary(href="final.html") Next step
+                        a.btn.btn_primary(href="step-5.html") Next step
 block footer

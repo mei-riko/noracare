@@ -3,6 +3,9 @@
 
     background-color: $golden-1;
     color: $text-light;
+
+    // height: 100%;
+    // overflow: auto;
 }
 
 @media all and (max-width: map-get($grid-breakpoints, 'md')){

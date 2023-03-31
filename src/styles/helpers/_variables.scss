@@ -15,7 +15,7 @@ $red                  : #D70015;
 $grey                 : #F2F5F5;
 
 $body-color           : $black;
-$body-bg              : $grey;
+$body-bg              : darken($grey, 10%);
 
 $border-color         : $black;
 $border-radius        : 22px;

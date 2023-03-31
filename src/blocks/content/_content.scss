@@ -3,23 +3,28 @@
     grid-gap: map-get($map: $spacers, $key: 2);
     grid-template-columns: 360px 1fr;
 
-    margin: 0 auto;
     width: 1200px;
     max-width: 100%;
-    // min-height: 100vh;
-    // height: 760px;
-    max-height: 100vh;
 
     padding: map-get($map: $spacers, $key: 2);
+    margin: 0 auto;
+
+    height: 100vh;
 
     // Grid Items
     &__col{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        height: calc(100vh - 32px);
 
-        height: 760px;
-        max-height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-gap: map-get($map: $spacers, $key: 2);
+
+        &_sidebar{
+            grid-template-rows: 1fr;
+        }
     }
+
     &__grid{
         display: grid;
         grid-gap: map-get($map: $spacers, $key: 2);
@@ -58,7 +63,7 @@
 
         &--full{
             flex-grow: 1;
-            max-height: calc(100vh - 32px);
+            max-height: calc(100vh - 64px);
             overflow: auto;
         }
     }
@@ -75,7 +80,7 @@
         grid-gap: map-get($map: $spacers, $key: 2);
         grid-template-columns: repeat(2, 1fr);
 
-        margin-top: map-get($map: $spacers, $key: 2);
+        // margin-top: map-get($map: $spacers, $key: 2);
         
         &_single{
             grid-template-columns: 1fr;

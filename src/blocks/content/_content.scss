@@ -38,6 +38,8 @@
 
         &_filled-info-container{
             grid-template-columns: 1fr;
+            border-radius: 22px;
+
             overflow: auto;
         }
         &_filled-info-col{

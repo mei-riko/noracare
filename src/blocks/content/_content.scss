@@ -17,11 +17,12 @@
         height: calc(100vh - 32px);
 
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 1fr;
+        
         grid-gap: map-get($map: $spacers, $key: 2);
 
-        &_sidebar{
-            grid-template-rows: 1fr;
+        &_sidebar-has-blocks{
+            grid-template-rows: 1fr auto;
         }
     }
 

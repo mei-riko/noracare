@@ -1083,12 +1083,12 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
   display: grid;
   height: calc(100vh - 32px);
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr;
   grid-gap: 16px;
 }
 
-.content__col_sidebar {
-  grid-template-rows: 1fr;
+.content__col_sidebar-has-blocks {
+  grid-template-rows: 1fr auto;
 }
 
 .content__grid {
@@ -1106,6 +1106,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 
 .content__grid_filled-info-container {
   grid-template-columns: 1fr;
+  border-radius: 22px;
   overflow: auto;
 }
 
